@@ -22,7 +22,7 @@ import { ContactComponent } from './contact/contact.component';
     SkillsComponent,
     SkillComponent,
     WorkComponent,
-    FooterComponent
+    FooterComponent,
     ContactComponent
   ],
   imports: [
