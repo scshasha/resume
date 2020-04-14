@@ -1,0 +1,17 @@
+<div class="container skills" id="skills">
+  <h1>Skills</h1>
+  <p class="skill-info">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dolorem ducimus ex facere harum illo in ipsam iure maiores minima minus necessitatibus neque nihil, odit placeat sapiente, sint, vero.
+  </p>
+<!--  <app-skill *ngFor="let skill of skills">Loading...</app-skill>-->
+
+<!--  To be removed above getting the above attached-->
+  <div class="skill skill-type" *ngFor="let skill of skills">
+    <div class="skill-tag skil-tag-{{ skill.name }}">
+      <p>{{ skill.name }}</p>
+    </div>
+    <div class="progress-bar progrssbar">
+      <div class="bar bar-{{ skill.name }}"><span>{{ skill.proficiency }}%</span></div>
+    </div>
+  </div>
+</div>
