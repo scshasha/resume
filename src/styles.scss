@@ -7,3 +7,80 @@ $color-pink-light: #C3073F;
 $color-text-white: #FFFFFF;
 $color-text-whitish: #EAEAEA;
 $color-text-white-light: #EAEAEA;
+
+/**
+ * ==============================================================
+ * RESETS & GLOBALS
+ * ==============================================================
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+
+  body {
+    background-color: $color-black;
+    max-width: 100%;
+
+    .container {
+      padding: 0 100px 0 100px;
+      margin: 0 auto !important;
+
+      header h1,
+      header a,
+      .about h1,
+      .skills h1,
+      .work h1,
+      .contact h1,
+      .text p {
+        color: $color-text-whitish !important;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: .9rem;
+        text-transform: uppercase;
+        position: relative;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+      }
+
+      li {
+        list-style: none;
+        margin-left: 30px;
+      }
+
+    }
+
+  }
+
+}
+/**
+ * ==============================================================
+ * CUSTOM SCROLLBAR
+ * ==============================================================
+ */
+::-webkit-scrollbar-track  {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: $color-text-whitish;
+}
+::-webkit-scrollbar  {
+  width: 12px;
+  background-color: $color-text-whitish;
+}
+::-webkit-scrollbar-thumb  {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: $color-pink;
+}

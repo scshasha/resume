@@ -1,0 +1,29 @@
+@import '../../styles';
+
+.navbar {
+  background-color: $color-black;
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .app-logo {
+      h1 {
+        span {
+          color: $color-pink;
+          /** @todo remove font-weight */
+          font-weight: 600;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+  }
+}
