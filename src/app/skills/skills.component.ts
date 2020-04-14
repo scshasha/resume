@@ -7,7 +7,7 @@ import { Skill } from '../shared/skill.model';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  skills: any = [
+  skills: Skill[] = [
     new Skill('Angular', 45),
     new Skill('Docker', 57),
     new Skill('PHP', 78),

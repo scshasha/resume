@@ -10,8 +10,19 @@
     <div class="skill-tag skil-tag-{{ skill.name }}">
       <p>{{ skill.name }}</p>
     </div>
-    <div class="progress-bar progrssbar">
-      <div class="bar bar-{{ skill.name }}"><span>{{ skill.proficiency }}%</span></div>
+<!--    <div class="progress-bar progrssbar">-->
+<!--      <div class="bar bar-{{ skill.name }}"><span>{{ skill.proficiency }}%</span></div>-->
+<!--    </div>-->
+    <div class="app-progress-bar progress progress">
+      <div
+        class="bar progress-bar bar-{{ skill.name.split(' ').join('_')|lowercase }}"
+        role="progressbar"
+        [style.width.%]="skill.proficiency"
+        aria-valuemin="0"
+        aria-valuemax="100"
+      >
+        {{ skill.proficiency }} &
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,22 @@
+<div class="container work" id="work">
+  <H1>Work</H1>
+  <div class="project-category">
+    <button
+      *ngFor="let category of categories; let i = index"
+      id="{{ category.split(' ').join('_')|lowercase }}"
+      class="active",
+      (click)="filterByCategory(i)"
+    >{{ category }}
+    </button>
+  </div>
+
+  <div class="category" *ngFor="let project of projects;let id = index">
+    <a [href]="project.appUrl">
+      <img
+        [src]="project.imgPath"
+        [alt]="project.name.split(' ').join('_')|lowercase"
+        class="img-responsive"
+      >
+    </a>
+  </div>
+</div>
