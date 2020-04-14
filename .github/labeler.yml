@@ -1,0 +1,12 @@
+  core:
+    - ./*
+  app:
+    - src/app/*
+  styling:
+    - src/**/*.css
+    - sc/**/*.scss
+  environment:
+    - src/environments/*
+  test:
+    - src/**/*.spec.js
+    - src/**/*.spec.ts
