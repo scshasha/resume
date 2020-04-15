@@ -1,7 +1,7 @@
 @import '../../styles';
 
 .navbar {
-  background-color: $color-black;
+  background-color: $color-primary-dark;
   header {
     display: flex;
     flex-wrap: wrap;
@@ -10,10 +10,11 @@
 
     .app-logo {
       h1 {
+        color: $color-secondary-dark;
+        font-weight: 600;
         span {
-          color: $color-pink;
+          color: $color-primary-bright;
           /** @todo remove font-weight */
-          font-weight: 600;
         }
       }
     }

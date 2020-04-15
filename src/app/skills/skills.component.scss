@@ -1,1 +1,186 @@
 @import '../../styles';
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50% 50%;
+  }
+}
+@keyframes expandWidth {
+  0% { width: 0; }
+  100% { width: auto; }
+}
+
+.skills {
+  height: $app-section-height;
+
+  h1 {
+    text-align: right;
+    font-size: 10rem;
+    opacity: .25;
+    font-weight: 900;
+  }
+
+  .skills-info {
+    font-size: 1.4rem;
+    color: $color-text-whitish;
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .skill {
+    position: relative;
+    margin: auto;
+
+    .app-col-2 {
+      display: inline-block;
+      margin-left: 75px;
+      padding: 20px 0px;
+
+      .skill-name {
+        font-size: 1.2rem;
+        border-left: 2px solid $color-primary-bright;
+        padding-left: 20px;
+        h3 {
+          font-weight: 600;
+          margin-bottom: 30px;
+
+          span:first-child {
+            margin-left: 20px;
+          }
+          span {
+            color: $color-primary-bright;
+            font-weight: 300;
+            padding: 0 2px 0 2px;
+            font-size: 11px !important;
+          }
+          .progress-value {
+            color: $color-secondary-bright;
+          }
+          .progress-total {
+            //color: $color-primary-bright;
+            font-weight: 900;
+          }
+        }
+      }
+
+      .skill-progress {
+        span.progress-default {
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          border-radius: 50%;
+          border: 2px solid $color-secondary-dark;
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+      .tag-1 {
+        span:nth-of-type(1) {
+          border-color: $color-secondary-bright;
+        }
+      }
+
+      .tag-2 {
+        span:nth-of-type(1),
+        span:nth-of-type(2) {
+          border-color: $color-secondary-bright;
+          //border: 2px solid $color-secondary-bright;
+        }
+      }
+      .tag-3 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-4 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-5 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4),
+        span:nth-of-type(5) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-6 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4),
+        span:nth-of-type(5),
+        span:nth-of-type(6) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-7 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4),
+        span:nth-of-type(5),
+        span:nth-of-type(6),
+        span:nth-of-type(7) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-8 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4),
+        span:nth-of-type(5),
+        span:nth-of-type(6),
+        span:nth-of-type(7),
+        span:nth-of-type(8) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-9 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4),
+        span:nth-of-type(5),
+        span:nth-of-type(6),
+        span:nth-of-type(7),
+        span:nth-of-type(8),
+        span:nth-of-type(9) {
+          border-color: $color-secondary-bright;
+        }
+      }
+      .tag-10 {
+        span:nth-of-type(1),
+        span:nth-of-type(2),
+        span:nth-of-type(3),
+        span:nth-of-type(4),
+        span:nth-of-type(5),
+        span:nth-of-type(6),
+        span:nth-of-type(7),
+        span:nth-of-type(8),
+        span:nth-of-type(9),
+        span:nth-of-type(10) {
+          border-color: $color-secondary-bright;
+        }
+      }
+
+    }
+
+
+  }
+}

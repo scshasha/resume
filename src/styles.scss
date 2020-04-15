@@ -8,6 +8,11 @@ $color-text-white: #FFFFFF;
 $color-text-whitish: #EAEAEA;
 $color-text-white-light: #EAEAEA;
 
+$color-primary-dark: #1A1A1D;
+$color-secondary-dark: #4E4E50;
+$color-primary-bright: #FFCA28;
+$color-secondary-bright: #F7EF81;
+
 $app-section-height: 500px;
 $app-section-margin-top: 50px;
 
@@ -21,7 +26,7 @@ $app-section-margin-top: 50px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Roboto', 'PT Sans', sans-serif;
 }
 
 
@@ -76,16 +81,16 @@ html {
 ::-webkit-scrollbar-track  {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
   border-radius: 10px;
-  background-color: $color-text-whitish;
+  background-color: $color-secondary-bright;
 }
 ::-webkit-scrollbar  {
   width: 12px;
-  background-color: $color-text-whitish;
+  background-color: $color-secondary-bright;
 }
 ::-webkit-scrollbar-thumb  {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: $color-pink;
+  background-color: $color-primary-bright;
 }
 /**
  * ==============================================================
@@ -93,10 +98,10 @@ html {
  * ==============================================================
  */
 ::-moz-selection {
-  background: $color-pink-light;
+  background: $color-secondary-bright;
   color: $color-text-whitish;
 }
 ::selection {
-  background: $color-pink-light;
+  background: $color-secondary-bright;
   color: $color-text-whitish;
 }
