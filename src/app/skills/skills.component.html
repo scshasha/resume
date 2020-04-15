@@ -9,8 +9,15 @@
   <div class="skill skill-type skill-measures" *ngIf="skills">
     <div class="col-5 col-md-5 app-col-2 col-md-5 col-sm-12 col" *ngFor="let skill of skills">
       <div class="skill-name">
-        <h3>{{ skill.name }}<span class="progress-value">{{ skill.proficiency }}</span><span>/</span><span class="progress-total">10</span><span></span></h3>
+        <h3>
+          {{ skill.name }}
+<!--          <sup>-->
+            <span class="progress-value">{{ skill.proficiency }}</span><span>/</span><span class="progress-total">10</span><span></span>
+<!--          </sup>-->
+        </h3>
       </div>
+
+
       <div class="skill-progress tag-{{ skill.proficiency }}">
         <span class="progress-default"></span>
         <span class="progress-default"></span>

@@ -45,6 +45,7 @@
 
       .skill-name {
         font-size: 1.2rem;
+        //border-left: 2px solid $color-primary-bright;
         border-left: 2px solid $color-primary-bright;
         padding-left: 20px;
         h3 {
@@ -52,7 +53,7 @@
           margin-bottom: 30px;
 
           span:first-child {
-            margin-left: 20px;
+            margin-left: 10px;
           }
           span {
             color: $color-primary-bright;
@@ -64,7 +65,6 @@
             color: $color-secondary-bright;
           }
           .progress-total {
-            //color: $color-primary-bright;
             font-weight: 900;
           }
         }
@@ -91,7 +91,6 @@
         span:nth-of-type(1),
         span:nth-of-type(2) {
           border-color: $color-secondary-bright;
-          //border: 2px solid $color-secondary-bright;
         }
       }
       .tag-3 {
