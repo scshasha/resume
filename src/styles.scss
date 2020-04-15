@@ -8,6 +8,9 @@ $color-text-white: #FFFFFF;
 $color-text-whitish: #EAEAEA;
 $color-text-white-light: #EAEAEA;
 
+$app-section-height: 500px;
+$app-section-margin-top: 50px;
+
 /**
  * ==============================================================
  * RESETS & GLOBALS
@@ -33,7 +36,7 @@ html {
 
     .container {
       padding: 0 100px 0 100px;
-      margin: 0 auto !important;
+      margin: 0 auto;
 
       header h1,
       header a,
@@ -42,7 +45,7 @@ html {
       .work h1,
       .contact h1,
       .text p {
-        color: $color-text-whitish !important;
+        color: $color-text-whitish;
       }
 
       a {
@@ -83,4 +86,17 @@ html {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: $color-pink;
+}
+/**
+ * ==============================================================
+ * CUSTOM SELECTION
+ * ==============================================================
+ */
+::-moz-selection {
+  background: $color-pink-light;
+  color: $color-text-whitish;
+}
+::selection {
+  background: $color-pink-light;
+  color: $color-text-whitish;
 }
