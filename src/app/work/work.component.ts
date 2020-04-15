@@ -11,37 +11,90 @@ export class WorkComponent implements OnInit {
     new Project(
       'Tipi',
       'An Angular2 and Drupal decoupled website',
-      'https://media-exp1.licdn.com/dms/image/C4D0BAQEemBOsuam-ug/company-logo_200_200/0?e=2159024400&v=beta&t=V1NPoRa3sQ9GpHlFBGJRWO4rVzu5y4iRmpwToug3Zf0',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
       `https://tipi.london`,
       3),
     new Project(
-      'Marty\'s',
-      'Marty\'s re-brand',
-      'https://s3-eu-west-1.amazonaws.com/martysuniverse-site-assets/wp-content/uploads/2019/10/16152725/martys_adventure1.jpg',
-      'https://www.martysuniverse.com/',
-      2
-    ),
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      3),
+    new Project(
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      5),
+    new Project(
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      4),
   ];
 
+  filterData: Project[] = [
+    new Project(
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      3),
+    new Project(
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      3),
+    new Project(
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      5),
+    new Project(
+      'Tipi',
+      'An Angular2 and Drupal decoupled website',
+      'https://www.bonline.co.za/wp-content/uploads/2018/10/Luxity3-2.jpg',
+      `https://tipi.london`,
+      4),
+  ];
+
+
   categories: any = [
-    'Mobile', 'Drupal', 'Web', 'AWS', 'Design', 'WordPress', 'Email Templates'
+    'All', 'Mobile', 'Drupal', 'WordPress', 'Angular', 'Design'
   ];
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  /**
+   * filterByCategory
+   * Filters projects and returns those that match the selection.
+   *
+   * @param id
+   * @return void|
+   */
   filterByCategory(id: number): void {
     const tempArray = [];
 
-    this.projects.forEach((project) => {
-      // tslint:disable-next-line:triple-equals
+    // tslint:disable-next-line:triple-equals
+    this.filterData.forEach((project) => {
       if (project.category == this.categories[id]) {
         tempArray.push(project);
       }
     });
 
-    this.projects = tempArray;
+    this.projects = [];
+
+    if (id === 0) {
+      this.projects = this.filterData;
+    } else {
+      this.projects = tempArray;
+    }
+
   }
 
 }
