@@ -17,7 +17,8 @@ color: ;
     h1 {
       color: $color-text-white-light;
       font-size: 4rem;
-      cursor: context-menu;
+      //cursor: context-menu;
+      cursor: pointer;
     }
 
     span {
