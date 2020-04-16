@@ -7,3 +7,109 @@ $color-pink-light: #C3073F;
 $color-text-white: #FFFFFF;
 $color-text-whitish: #EAEAEA;
 $color-text-white-light: #EAEAEA;
+
+$color-primary-dark: #1A1A1D;
+$color-secondary-dark: #4E4E50;
+$color-primary-bright: #FFCA28;
+$color-secondary-bright: #F7EF81;
+
+$app-section-height: 500px;
+$app-section-margin-top: 50px;
+
+$para_default_size: 1.2rem;
+
+/**
+ * ==============================================================
+ * RESETS & GLOBALS
+ * ==============================================================
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', 'Roboto', sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+
+  body {
+    background-color: $color-black;
+    max-width: 100%;
+
+    .container {
+      //padding: 0 100px 0 100px;
+      padding: 0 100px 100px 100px;
+      margin: 0 auto;
+
+      header h1,
+      header a,
+      .about h1,
+      .skills h1,
+      .work h1,
+      .contact h1,
+      .text p {
+        color: $color-text-whitish;
+      }
+
+      a {
+        text-decoration: none;
+        font-size: .9rem;
+        text-transform: uppercase;
+        position: relative;
+        top: 50%;
+        bottom: 50%;
+        transform: translateY(-50%);
+      }
+
+      li {
+        list-style: none;
+        margin-left: 30px;
+      }
+
+    }
+
+  }
+
+}
+/**
+ * ==============================================================
+ * CUSTOM SCROLLBAR
+ * ==============================================================
+ */
+::-webkit-scrollbar-track  {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  //background-color: $color-secondary-bright;
+  background-color: $color-primary-dark;
+}
+::-webkit-scrollbar  {
+  width: 12px;
+  background-color: $color-primary-dark;
+}
+::-webkit-scrollbar-thumb  {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  //background-color: $color-primary-bright;
+  background-image: linear-gradient(to bottom, $color-primary-bright, $color-pink-light);
+}
+/**
+ * ==============================================================
+ * CUSTOM SELECTION
+ * ==============================================================
+ */
+::-moz-selection {
+  background: $color-secondary-bright;
+  color: $color-text-whitish;
+}
+::selection {
+  background: $color-secondary-bright;
+  color: $color-text-whitish;
+}
+
+
+

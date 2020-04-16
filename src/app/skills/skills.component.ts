@@ -8,9 +8,12 @@ import { Skill } from '../shared/skill.model';
 })
 export class SkillsComponent implements OnInit {
   skills: Skill[] = [
-    new Skill('Angular', 45),
-    new Skill('Docker', 57),
-    new Skill('PHP', 78),
+    new Skill('WordPress / Joomla / Drupal', 6),
+    new Skill('Angular2 / React / Node', 4),
+    new Skill('C# / C++ / Java / .NET', 3),
+    new Skill('PHP / Laravel / Symfony', 8),
+    new Skill('AWS EC2 / Acquia / Pantheon ', 5),
+    new Skill('npm / Composer / Git / BitBucket', 6),
   ];
 
 

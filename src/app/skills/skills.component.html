@@ -1,28 +1,38 @@
 <div class="container skills" id="skills">
   <h1>Skills</h1>
-  <p class="skill-info">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci cumque dolorem ducimus ex facere harum illo in ipsam iure maiores minima minus necessitatibus neque nihil, odit placeat sapiente, sint, vero.
+  <p class="skills-info w-65 mt-3">
+    My main area of expertise is back end development. <br><br>I also have average front end experience in working with (Angular2+, Sass, TypeScript, HTML, NodeJS and other).
   </p>
 <!--  <app-skill *ngFor="let skill of skills">Loading...</app-skill>-->
 
 <!--  To be removed above getting the above attached-->
-  <div class="skill skill-type" *ngFor="let skill of skills">
-    <div class="skill-tag skil-tag-{{ skill.name }}">
-      <p>{{ skill.name }}</p>
-    </div>
-<!--    <div class="progress-bar progrssbar">-->
-<!--      <div class="bar bar-{{ skill.name }}"><span>{{ skill.proficiency }}%</span></div>-->
-<!--    </div>-->
-    <div class="app-progress-bar progress progress">
-      <div
-        class="bar progress-bar bar-{{ skill.name.split(' ').join('_')|lowercase }}"
-        role="progressbar"
-        [style.width.%]="skill.proficiency"
-        aria-valuemin="0"
-        aria-valuemax="100"
-      >
-        {{ skill.proficiency }} &
+  <div class="skill skill-type skill-measures" *ngIf="skills">
+    <div class="col-5 col-md-5 app-col-2 col-md-5 col-sm-12 col" *ngFor="let skill of skills">
+      <div class="skill-name">
+        <h3>
+          {{ skill.name }}
+<!--          <sup>-->
+            <span class="progress-value">{{ skill.proficiency }}</span><span>/</span><span class="progress-total">10</span><span></span>
+<!--          </sup>-->
+        </h3>
+      </div>
+
+
+      <div class="skill-progress tag-{{ skill.proficiency }}">
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
+        <span class="progress-default"></span>
       </div>
     </div>
+
+
   </div>
+
 </div>

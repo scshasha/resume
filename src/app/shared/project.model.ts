@@ -6,8 +6,9 @@ export class Project {
   public imgPath: string;
   public appUrl: string;
   public category: string;
+
   categories: any = [
-    'Mobile', 'Drupal', 'Web', 'AWS', 'Design', 'WordPress', 'Email Templates'
+    'All', 'Mobile', 'Drupal', 'WordPress', 'Angular', 'Design'
   ];
 
 

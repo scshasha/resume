@@ -10,4 +10,11 @@ function initCustomJS() {
 
   /** print message to console */
   console.log("DOM ready...");
+
+  $('div[class^="cat-item-"]').on('click', (event) => {
+    const target = event.target;
+
+    $('div[class^="cat-item-"]').removeClass('is-active');
+    $(target).addClass('is-active');
+  });
 }
