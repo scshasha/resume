@@ -1,5 +1,7 @@
 <div class="container work" id="work">
-  <h1>Work</h1>
+
+<h1>Work</h1>
+
   <div class="project-category">
 
     <!--      style="cursor: pointer; padding: 5px 10px; display: inline-block; margin: 10px auto;"-->
@@ -10,7 +12,9 @@
       display: inline-block;
       width: 16.66%;
       text-align: center;
-      transition: all 400ms ease-out;"
+      transition: all 400ms ease-out;
+      font-size: 1.2rem;
+      font-weight: 900;"
       *ngFor="let category of categories; let i = index"
       id="{{ category.split(' ').join('_')|lowercase }}"
       class="cat-item-{{ category.split(' ').join('_')|lowercase }}"
