@@ -26,7 +26,7 @@ $app-section-margin-top: 50px;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', 'PT Sans', sans-serif;
+  font-family: 'PT Sans', 'Roboto', sans-serif;
 }
 
 
@@ -41,7 +41,7 @@ html {
 
     .container {
       //padding: 0 100px 0 100px;
-      padding: 0 50px 100px 50px;
+      padding: 0 100px 100px 100px;
       margin: 0 auto;
 
       header h1,
@@ -108,3 +108,6 @@ html {
   background: $color-secondary-bright;
   color: $color-text-whitish;
 }
+
+
+
