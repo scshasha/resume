@@ -4,7 +4,9 @@
     - src/app/*
   styling:
     - src/**/*.css
-    - sc/**/*.scss
+    - src/**/*.scss
+    - src/*.scss
+    - src/*.css
   environment:
     - src/environments/*
   test:
