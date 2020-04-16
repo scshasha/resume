@@ -1,8 +1,8 @@
 @import '../../styles';
 
 .about {
-  height: $app-section-height;
-  margin-top: $app-section-margin-top;
+  max-height: $app-section-height;
+  position: relative;
 
   h1 {
     font-size: 10rem;
@@ -14,7 +14,7 @@
 
   .about-info {
     max-width: 800px;
-    background-color: #1A1A1D;
+    background-color: $color-primary-dark;
     box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.25);
     padding: 50px;
     position: relative;
