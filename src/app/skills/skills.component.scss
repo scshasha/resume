@@ -1,18 +1,5 @@
 @import '../../styles';
 
-@keyframes move {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 50% 50%;
-  }
-}
-@keyframes expandWidth {
-  0% { width: 0; }
-  100% { width: auto; }
-}
-
 .skills {
   //height: $app-section-height;
 
@@ -24,7 +11,7 @@
   }
 
   .skills-info {
-    font-size: 1.4rem;
+    font-size: $para_default_size;
     color: $color-text-whitish;
     max-width: 800px;
     position: relative;

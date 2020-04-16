@@ -1,5 +1,12 @@
 @import '../../styles';
+/**
+color: ;
 
+    font-weight: 400;
+    font-size: 11px;
+    font-family: "Open Sans",sans-serif;
+    letter-spacing: 3px;
+ */
 .main-info-section {
   //height: $app-section-height;
   ///** height: calc(100vh - 81.6px); */
@@ -35,10 +42,29 @@
       margin-right: 5px;
     }
 
-    p {
+    & p {
       letter-spacing: 3px;
-      word-spacing: 10px;
-      font-size: .8rem;
+      font-weight: 400;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      //color: $color-secondary-dark; // #4e4e50
+      color: #8d8d8d;
+      .strike {
+
+      }
+    }
+
+    & p:nth-of-type(2) {
+      letter-spacing: 1px !important;
+      word-spacing: 1px !important;
+      margin-top: 50px;
+      font-size: 1.2rem;
+
+      & .strike {
+        color: $color-text-whitish;
+        background-color: #8d8d8d;
+        text-decoration:line-through
+      }
     }
 
     a:hover {
@@ -64,13 +90,14 @@
 
     a {
       padding: 12px 25px;
-      background-color: none;
+      background-color: transparent;
       border: 3px solid $color-primary-bright;
       color: $color-primary-bright;
       font-size: .8rem;
       letter-spacing: 2px;
       position: relative;
-      top: 80px;
+      //top: 80px;
+      top: 40px;
       overflow: hidden;
       transition: .5s;
       display: inline-block;

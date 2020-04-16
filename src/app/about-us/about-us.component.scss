@@ -26,12 +26,19 @@
     margin-top: 20px;
 
     p {
-      font-size: 1.3rem;
+      font-size: $para_default_size;
       color: $color-text-whitish;
 
-      :nth-child(2), :last-child {
-        margin-top: 30px;
+      a {
+        text-decoration: underline;
+        text-transform: none;
+        color: $color-text-whitish;
+        font-size: 1.2rem !important;
+        font-weight: 400;
       }
+    }
+    p:nth-of-type(1) ~ p {
+      margin-top: 30px;
     }
   }
 
