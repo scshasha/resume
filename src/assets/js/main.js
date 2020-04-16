@@ -11,15 +11,13 @@ function initCustomJS() {
   /** print message to console */
   console.log("DOM ready...");
 
-  /**
-   * PROGRESS BAR ANIMATION.
-   */
-  $(".meter > span").each(function() {
-    $(this)
-      .data("origWidth", $(this).width())
-      .width(0)
-      .animate({
-        width: $(this).data("origWidth") // or + "%" if fluid
-      }, 1200);
+  $('div[class^="cat-item-"]').on('click', (event) => {
+    const target = event.target;
+    console.log(target);
+    $('div[class^="cat-item-"]').removeClass('is-active');
+    $(target).addClass('is-active');
+    console.log(target);
+
+    // $(this).addClass("is-active").siblings().removeClass("is-active");
   });
 }
