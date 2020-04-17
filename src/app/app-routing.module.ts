@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {AppComponent} from './app.component';
-import {PolicyComponent} from './pages/policy/policy.component';
-import {AboutUsComponent} from './about-us/about-us.component';
-import {WorkComponent} from './work/work.component';
-import {SkillsComponent} from './skills/skills.component';
-import {ContactComponent} from './contact/contact.component';
-import {WelcomeComponent} from './welcome/welcome.component';
+// import {AppComponent} from './app.component';
+import { PolicyComponent } from './pages/policy/policy.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { WorkComponent } from './work/work.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 
 const routes: Routes = [
