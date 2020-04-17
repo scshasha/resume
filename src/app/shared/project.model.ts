@@ -8,7 +8,7 @@ export class Project {
   public category: string;
 
   categories: any = [
-    'All', 'Mobile', 'Drupal', 'WordPress', 'Angular', 'Design'
+    'All', 'Drupal', 'WordPress', 'Angular', '.Net', 'Adobe'
   ];
 
 

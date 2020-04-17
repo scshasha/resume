@@ -14,14 +14,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
 
     [class^="cat-item-"]:hover, .is-active {
-        background: $color-secondary-bright;
+      border-bottom: 2px solid $color-pink-light;
     }
-
-
   }
 
   .project-grid-wrapper {

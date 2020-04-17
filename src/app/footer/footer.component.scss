@@ -26,23 +26,24 @@
       color: $color-secondary-dark;
       transition: all 4ms ease-out;
     }
-    & .fa-stack-overflow:hover, .socials-stack-overflow:hover {
+
+    .socials-stack-overflow:hover, .socials-stack-overflow:hover .fa-stack-overflow {
       color: #F48024;
       border-color: #F48024;
     }
-    & .fa-github:hover, .socials-github:hover {
+    & .socials-github:hover, .socials-github:hover .fa-github {
       color: #24292e;
       border-color: #24292e;
     }
-    & .fa-whatsapp:hover, .socials-whatsapp:hover {
+    & .socials-whatsapp:hover, .socials-whatsapp:hover .fa-whatsapp {
       color: #00e676;
       border-color: #00e676;
     }
-    & .fa-linkedin-in:hover, .socials-linked-in:hover {
+    & .socials-linked-in:hover, .socials-linked-in:hover .fa-linkedin-in {
       color: #093a73;
       border-color: #093a73;
     }
-    & .fa-download:hover, .socials-download:hover {
+    & .socials-download:hover, .socials-download:hover .fa-download {
       color: $color-text-whitish;
       border-color: $color-text-whitish;
     }
