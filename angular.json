@@ -34,6 +34,11 @@
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/ScrollMagic.min.js",
+              "src/assets/js/animation.gsap.min.js",
+              "src/assets/js/TimelineLite.min.js",
+              "src/assets/js/TweenMax.min.js",
+              "src/assets/js/CSSPlugin.min.js",
               "src/assets/js/main.js"
             ]
           },
