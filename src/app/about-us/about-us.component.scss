@@ -1,7 +1,7 @@
 @import '../../styles';
 
 .about {
-  max-height: $app-section-height;
+  max-height: 650px; /** $app-section-height; */
   position: relative;
 
   h1 {
