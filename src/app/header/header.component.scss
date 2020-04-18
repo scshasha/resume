@@ -12,10 +12,15 @@
       h1 {
         color: $color-secondary-dark;
         font-weight: 600;
+
         span {
           color: $color-primary-bright;
           /** @todo remove font-weight */
         }
+      }
+
+      h1:active, h1::selection, h1:focus, h1::after, h1::before {
+        outline: none;
       }
     }
 

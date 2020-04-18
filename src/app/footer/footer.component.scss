@@ -2,6 +2,9 @@
 
 .footer {
   letter-spacing: 3px;
+  /** larger space needed before footer items */
+  margin-top: 120px;
+
   a, p, span {
     color: $color-secondary-dark;
   }
