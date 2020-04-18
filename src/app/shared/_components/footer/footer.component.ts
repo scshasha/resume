@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   today: any = new Date();
+  linkedinUrl: string = environment.profile_url_linkedin;
+  githubUrl: string = environment.profile_url_github;
+  stackoverflowUrl: string = environment.profile_url_stackoverflow;
+  resumeFile: string = environment.profile_resume;
 
   constructor() { }
 
