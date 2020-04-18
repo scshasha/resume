@@ -13,7 +13,7 @@ import { WorkComponent } from './work/work.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { PolicyComponent } from './pages/policy/policy.component';
-import { FourohfourComponent } from './fourohfour/fourohfour.component';
+import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
 
 @NgModule({
   declarations: [
