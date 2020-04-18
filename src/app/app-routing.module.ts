@@ -7,15 +7,20 @@ import { WorkComponent } from './work/work.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import {FourohfourComponent} from './pages/fourohfour/fourohfour.component';
 
 
 const routes: Routes = [
   { path: '', component: WelcomeComponent },
+  { path: 'welcome', component: WelcomeComponent },
   { path: 'about-me', component: AboutUsComponent },
   { path: 'work', component: WorkComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'terms', component: PolicyComponent },
+  { path: '404', component: FourohfourComponent },
+  // otherwise redirect to home
+  { path: '**', redirectTo: '404' }
 ];
 
 @NgModule({
