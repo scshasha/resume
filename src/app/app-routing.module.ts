@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {FourohfourComponent} from './pages/fourohfour/fourohfour.component';
 import {ComingsoonComponent} from './pages/comingsoon/comingsoon.component';
+import {LoginComponent} from './login/login.component';
 
 
 const routes: Routes = [
@@ -21,10 +22,10 @@ const routes: Routes = [
   { path: 'contact-me', component: ContactComponent },
   { path: 'coming-soon', component: ComingsoonComponent },
   { path: 'page-not-found', component: FourohfourComponent },
+  { path: 'sign-in', component: LoginComponent },
 
   // Redirect Routes
   { path: '', redirectTo: '/welcome', pathMatch: 'full' },
-  { path: 'sign-in', redirectTo: '/coming-soon', pathMatch: 'full' },
   { path: 'terms-and-dislosures', redirectTo: '/coming-soon', pathMatch: 'full' },
 
 
