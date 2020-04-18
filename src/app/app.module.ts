@@ -17,7 +17,7 @@ import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
 import { AlertComponent } from './shared/_components/alert/alert.component';
 import { LoginComponent } from './login/login.component';
 import { ComingsoonComponent } from './pages/comingsoon/comingsoon.component';
-import { DashboardComponent } from './page/dashboard/dashboard.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
