@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Title} from '@angular/platform-browser';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,21 @@ import {Title} from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'chris-shasha';
+  router: Router;
 
-  constructor(private appTitleService: Title) { }
+  // tslint:disable-next-line:variable-name
+  constructor(private appTitleService: Title, private _router: Router) {
+  }
+
+  includeHeader() {
+    console.log(this._router.url);
+    switch (this._router.url) {
+      case '/page-not-found':
+        return false;
+      default:
+        return true;
+    }
+  }
 
   setAppTitle(title: string) {
     this.appTitleService.setTitle(title);

@@ -8,19 +8,29 @@ import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {FourohfourComponent} from './pages/fourohfour/fourohfour.component';
+import {ComingsoonComponent} from './pages/comingsoon/comingsoon.component';
 
 
 const routes: Routes = [
-  { path: '', component: WelcomeComponent },
+
+  // Current/Active Routes
   { path: 'welcome', component: WelcomeComponent },
   { path: 'about-me', component: AboutUsComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'terms', component: PolicyComponent },
-  { path: '404', component: FourohfourComponent },
-  // otherwise redirect to home
-  { path: '**', redirectTo: '404' }
+  { path: 'my-work', component: WorkComponent },
+  { path: 'my-skills', component: SkillsComponent },
+  { path: 'contact-me', component: ContactComponent },
+  { path: 'coming-soon', component: ComingsoonComponent },
+  { path: 'page-not-found', component: FourohfourComponent },
+
+  // Redirect Routes
+  { path: '', redirectTo: '/welcome', pathMatch: 'full' },
+  { path: 'sign-in', redirectTo: '/coming-soon', pathMatch: 'full' },
+  { path: 'terms-and-dislosures', redirectTo: '/coming-soon', pathMatch: 'full' },
+
+
+
+  // otherwise redirect to 404
+  { path: '**', redirectTo: '/page-not-found' }
 ];
 
 @NgModule({
