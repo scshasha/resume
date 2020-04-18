@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule, Title} from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { PolicyComponent } from './pages/policy/policy.component';
 import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
+import { AlertComponent } from './shared/_components/alert/alert.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,16 @@ import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
     ContactComponent,
     PolicyComponent,
     FourohfourComponent,
+    AlertComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

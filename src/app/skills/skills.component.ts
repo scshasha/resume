@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Skill } from '../shared/skill.model';
+import { Skill } from '../shared/_models/skill.model';
 
 @Component({
   selector: 'app-skills',
