@@ -3,17 +3,17 @@
   <p class="skills-info w-65 mt-3">
     My main area of expertise is back end development. <br><br>I also have average front end experience in working with (Angular2+, Sass, TypeScript, HTML, NodeJS and other).
   </p>
-<!--  <app-skill *ngFor="let skill of skills">Loading...</app-skill>-->
+  <!--  <app-skill *ngFor="let skill of skills">Loading...</app-skill>-->
 
-<!--  To be removed above getting the above attached-->
+  <!--  To be removed above getting the above attached-->
   <div class="skill skill-type skill-measures" *ngIf="skills">
     <div class="col-5 col-md-5 app-col-2 col-md-5 col-sm-12 col" *ngFor="let skill of skills">
       <div class="skill-name">
         <h3>
           {{ skill.name }}
-<!--          <sup>-->
-            <span class="progress-value">{{ skill.proficiency }}</span><span>/</span><span class="progress-total">10</span><span></span>
-<!--          </sup>-->
+          <!--          <sup>-->
+          <span class="progress-value">{{ skill.proficiency }}</span><span>/</span><span class="progress-total">10</span><span></span>
+          <!--          </sup>-->
         </h3>
       </div>
 
@@ -31,8 +31,5 @@
         <span class="progress-default"></span>
       </div>
     </div>
-
-
   </div>
-
 </div>
