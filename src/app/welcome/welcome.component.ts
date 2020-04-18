@@ -8,8 +8,13 @@ import {Title} from '@angular/platform-browser';
 })
 export class WelcomeComponent implements OnInit {
 
+  // tslint:disable-next-line:variable-name
   constructor(private appTitleService: Title) {
-    appTitleService.setTitle('Chris: Web Developer');
+    this.setAppTitle('Chris: Web Developer');
+  }
+
+  setAppTitle(title: string) {
+    this.appTitleService.setTitle(title);
   }
 
   ngOnInit(): void {
