@@ -133,6 +133,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "chris-shasha"
+    }
+  },
+  "defaultProject": "chris-shasha",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -16,7 +16,6 @@ export class AppComponent {
   }
 
   includeHeader() {
-    console.log(this._router.url);
     switch (this._router.url) {
       case '/page-not-found':
         return false;
@@ -24,6 +23,18 @@ export class AppComponent {
         return true;
     }
   }
+
+  includeFooter() {
+    switch (this._router.url) {
+      case '/user/login':
+      case '/user/new':
+        return false;
+      default:
+        return true;
+    }
+  }
+
+
 
   setAppTitle(title: string) {
     this.appTitleService.setTitle(title);

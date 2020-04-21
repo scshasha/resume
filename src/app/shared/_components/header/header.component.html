@@ -11,7 +11,9 @@
         <li><a routerLink="/my-skills" (click)="setAppTitle('Skills · Christopher')">skills</a></li>
         <li><a routerLink="/my-work" (click)="setAppTitle('Work · Christopher')">my work</a></li>
         <li><a routerLink="/contact-me" (click)="setAppTitle('Contact me · Christopher')">contact me</a></li>
-        <li><a routerLink="/sign-in" (click)="setAppTitle('Sign in · Christopher')">sign in</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/user/login" (click)="setAppTitle('Sign in · Christopher')">sign in</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/administrator" (click)="setAppTitle('Dashboard · Christopher')">admin</a></li>
+        <li *ngIf="isLoggedIn"><a href="#" (click)="logout($event)">sign out</a></li>
       </ul>
     </nav>
   </header>
