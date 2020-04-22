@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  version: '1.1',
+  base_api: 'http://localhost:8000/api/auth',
+  mail_to: 'shaha.christopher@gmail.com',
+  mail_subject: 'Howdy, Chris.',
+  google_au: '',
+  profile_url_linkedin: 'https://linkedin.com/in/scshasha',
+  profile_url_github: 'https://github.com/scshasha',
+  profile_url_stackoverflow: 'https://stackoverflow.com/users/6050028/iamsiv',
+  profile_resume: 'assets/uploads/files/scshasha-gp_compressed.pdf',
 };
 
 /*
