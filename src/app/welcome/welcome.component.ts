@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-welcome',
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor() { }
+  // tslint:disable-next-line:variable-name
+  constructor(private appTitleService: Title) {
+    this.setAppTitle('Chris: Web Developer');
+  }
+
+  setAppTitle(title: string) {
+    this.appTitleService.setTitle(title);
+  }
 
   ngOnInit(): void {
   }

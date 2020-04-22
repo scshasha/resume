@@ -44,8 +44,10 @@
 
 
 .fourOHfour {
-  max-height: 600px; /** $app-section-height; */
+  max-height: 260px; /** $app-section-height; */
   position: relative;
+
+  margin-top: 180px;
 
   h1 {
     font-size: 10rem;
@@ -106,7 +108,14 @@
 
     p {
       font-size: $para_default_size;
-      color: $color-text-whitish;
+      color: $color-text-whitish
+
+
+    }
+
+    a {
+      text-decoration: underline;
+      color: $color-secondary-dark;
     }
   }
 

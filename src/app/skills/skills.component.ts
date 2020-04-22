@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Skill } from '../shared/skill.model';
+import { Skill } from '../shared/_models/skill.model';
+import {SkillsService} from "../shared/_services/skills.service";
 
 @Component({
   selector: 'app-skills',
@@ -7,19 +8,24 @@ import { Skill } from '../shared/skill.model';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-  skills: Skill[] = [
-    new Skill('WordPress / Joomla / Drupal', 6),
-    new Skill('Angular2 / React / Node', 4),
-    new Skill('C# / C++ / Java / .NET', 3),
-    new Skill('PHP / Laravel / Symfony', 8),
-    new Skill('AWS EC2 / Acquia / Pantheon ', 5),
-    new Skill('npm / Composer / Git / BitBucket', 6),
-  ];
+  private skills = [];
 
-
-  constructor() { }
+  constructor(
+    private skillService: SkillsService
+  ) {
+    this.loadSkills();
+  }
 
   ngOnInit(): void {
+  }
+
+  loadSkills() {
+    // this.skillService.get().subscribe((response: any) => {
+    //   console.log(response);
+    //   this.skills = response;
+    // });
+
+    this.skills = this.skillService.get();
   }
 
 }

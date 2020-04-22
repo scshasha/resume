@@ -1,6 +1,7 @@
-<app-header></app-header>
+<app-header *ngIf="includeHeader()"></app-header>
+<ng-snotify></ng-snotify>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="includeFooter()"></app-footer>
 <!--<app-welcome></app-welcome>-->
 <!--<app-about-us></app-about-us>-->
 <!--<app-skills></app-skills>-->
