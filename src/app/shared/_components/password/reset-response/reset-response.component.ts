@@ -1,7 +1,8 @@
+import { SnotifyService } from 'ng-snotify';
 import { LaraService } from './../../../_services/lara.service';
 import { Component, OnInit } from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-reset-response',
@@ -21,7 +22,9 @@ export class ResetResponseComponent implements OnInit {
   constructor(
     private _app_title: Title,
     private _route: ActivatedRoute,
-    private Lara: LaraService
+    private Lara: LaraService,
+    private _router: Router,
+    private _notify: SnotifyService
   ) {
     
     this._app_title.setTitle('Reset Password · Christopher');
@@ -46,11 +49,23 @@ export class ResetResponseComponent implements OnInit {
 
 
   handleResponse(data) {
-    console.log(data);
+    const url = this._router;
+
+    this._notify.confirm('Reset successful! You may now login using your new password.', {
+      buttons: [
+        {
+          text: 'Okay',
+          action: toaster => {
+            url.navigate(['/user/login']),
+            this._notify.remove(toaster.id)
+          }
+        },
+      ]
+    })
   }
 
   handleError(error) {
-    console.log(error);
+    this.error = error.error.errors;
   }
 
 }
