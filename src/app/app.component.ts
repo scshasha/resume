@@ -28,6 +28,8 @@ export class AppComponent {
     switch (this._router.url) {
       case '/user/login':
       case '/user/new':
+      case '/reset/request':
+      case '/administrator':
         return false;
       default:
         return true;

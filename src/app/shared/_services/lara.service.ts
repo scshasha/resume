@@ -33,7 +33,11 @@ export class LaraService {
     return this.http.post(`${environment.base_api}/signup`, formData);
   }
 
-  SignOut() {
+  sendPasswordResetLink(email) {
+    return this.http.post(`${environment.base_api}/passwordResetLink`, email);
+  }
 
+  changePassword(formData) {
+    return this.http.post(`${environment.base_api}/resetPassword`, formData);
   }
 }

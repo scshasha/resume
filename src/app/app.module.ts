@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,11 @@ import { ContactComponent } from './contact/contact.component';
 import { PolicyComponent } from './pages/policy/policy.component';
 import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import {LaraService} from "./shared/_services/lara.service";
+import {TokenService} from "./shared/_services/token.service";
+import {AuthService} from "./shared/_services/auth.service";
+import {AuthGuardService} from "./shared/_services/auth-guard.service";
+import {UnauthGuardService} from "./shared/_services/unauth-guard.service";
 
 
 @NgModule({
@@ -51,10 +57,21 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SnotifyModule
   ],
   providers: [
+    LaraService,
+    TokenService,
+    AuthService,
+    AuthGuardService,
+    UnauthGuardService,
     Title,
+    {
+      provide: 'SnotifyToastConfig',
+      useValue: ToastDefaults
+    },
+    SnotifyService
   ],
   bootstrap: [AppComponent]
 })

@@ -13,7 +13,7 @@ export class WorkComponent implements OnInit {
   private readonly categories: any = [
     'All', 'Drupal', 'WordPress', 'Angular', '.Net', 'Adobe'
   ];
-  
+
   constructor(
     private projectsService: ProjectsService
   ) {
