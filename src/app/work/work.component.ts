@@ -9,8 +9,8 @@ import {ProjectsService} from "../shared/_services/projects.service";
 })
 export class WorkComponent implements OnInit {
   public projects = [];
-  private readonly filterData: any = [];
-  private readonly categories: any = [
+  public filterData = [];
+  public readonly categories: any = [
     'All', 'Drupal', 'WordPress', 'Angular', '.Net', 'Adobe'
   ];
 
