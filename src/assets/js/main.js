@@ -21,22 +21,31 @@ function init() {
   /** ===================== END PROJECT FILTER ACTIVE TOGGLE ============================ */
 
   /** ===================== WELCOME SCREEN TITLE ANIMATION ============================ */
-  const spans = document.querySelectorAll('h1 span');
-  spans.forEach(span => span.addEventListener('mouseover', (event) => {
+  // const spans = document.querySelectorAll('h1 span');
+  // spans.forEach(span => span.addEventListener('mouseover', (event) => {
+  //   span.classList.add('animated', 'rubberBand');
+  // }));
+  // spans.forEach(span => span.addEventListener('mouseout', (event) => {
+  //   span.classList.remove('animated', 'rubberBand');
+  // }));
+
+  $('h1').on('mouseover', 'span', (event) => {
+    const span = event.target;
     span.classList.add('animated', 'rubberBand');
-  }));
-  spans.forEach(span => span.addEventListener('mouseout', (event) => {
+  });
+  $('h1').on('mouseout', 'span', (event) => {
+    const span = event.target;
     span.classList.remove('animated', 'rubberBand');
-  }));
+  });
   /** ===================== END WELCOME SCREEN TITLE ANIMATION ============================ */
 
   /** ===================== SKILL PROGRESS ANIMATION ============================ */
-  const skills = document.querySelectorAll('span.progress-default');
-  skills.forEach(skill => skill.addEventListener('mouseover', (event) => {
-    skill.classList.add('animated', 'rubberBand');
-  }));
-  skills.forEach(skill => skill.addEventListener('mouseout', (event) => {
-    skill.classList.remove('animated', 'rubberBand');
-  }));
+  // const skills = document.querySelectorAll('span.progress-default');
+  // skills.forEach(skill => skill.addEventListener('mouseover', (event) => {
+  //   skill.classList.add('animated', 'rubberBand');
+  // }));
+  // skills.forEach(skill => skill.addEventListener('mouseout', (event) => {
+  //   skill.classList.remove('animated', 'rubberBand');
+  // }));
   /** ===================== END SKILL PROGRESS TITLE ANIMATION ============================ */
 }
