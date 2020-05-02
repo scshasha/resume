@@ -20,7 +20,7 @@ Build a portfolio web application and demonstrate your frontend + backend knowle
 
 
 Execute:
-```
+```sh
 git clone https://github.com/scshasha/resume.git resume
 cd resume
 npm install
