@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProjectsService} from '../shared/_services/projects.service';
+import { ProjectsService } from '../shared/_services/projects.service';
 
 @Component({
     selector: 'app-work',
@@ -29,12 +29,10 @@ export class WorkComponent implements OnInit {
     }
 
     /**
-   * filterByCategory
-   * Filters projects and returns those that match the selection.
-   *
-   * @param id
-   * @return void|
-   */
+     * filterByCategory
+     * Filters projects and returns those that match the selection.
+     * @return void|
+     */
     filterByCategory(id: number): void {
         const tempArray = [];
 
@@ -56,12 +54,10 @@ export class WorkComponent implements OnInit {
     }
 
     /**
-   * randomizeData
-   * Randomly shuffles data
-   *
-   * @param data
-   * @return array
-   */
+     * randomizeData
+     * Shuffles data
+     * @return array
+     */
     randomizeData(data: any) {
         for (let i = data.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));

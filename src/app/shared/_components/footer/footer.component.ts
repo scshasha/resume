@@ -20,7 +20,6 @@ export class FooterComponent implements OnInit {
 
   /**
    * Returns custom string year replacement.
-   * @param value
    */
   copyrightYear(value: any) {
     let year: any = '';

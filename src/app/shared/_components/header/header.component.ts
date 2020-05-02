@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit {
   public isLoggedIn: boolean;
 
   constructor(
-    private _app_title: Title,
-    private _router: Router,
+    private appTitle: Title,
+    private appRouter: Router,
     private Auth: AuthService,
     private Token: TokenService
   ) { }
@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
   }
 
   setAppTitle(title: string) {
-    this._app_title.setTitle(title);
+    this.appTitle.setTitle(title);
   }
 
   logout($event: MouseEvent) {
@@ -34,6 +34,6 @@ export class HeaderComponent implements OnInit {
 
     this.Token.del(); // remove token
     this.Auth.changeAuthStatus(false); // change status to false
-    this._router.navigateByUrl('/user/login'); // go to the login page/view
+    this.appRouter.navigateByUrl('/user/login'); // go to the login page/view
   }
 }

@@ -12,11 +12,11 @@ export class AppComponent {
   router: Router;
 
   // tslint:disable-next-line:variable-name
-  constructor(private appTitleService: Title, private _router: Router) {
+  constructor(private appTitleService: Title, private appRouter: Router) {
   }
 
   includeHeader() {
-    switch (this._router.url) {
+    switch (this.appRouter.url) {
       case '/page-not-found':
         return false;
       default:
@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   includeFooter() {
-    switch (this._router.url) {
+    switch (this.appRouter.url) {
       case '/user/login':
       case '/user/new':
       case '/reset/request':

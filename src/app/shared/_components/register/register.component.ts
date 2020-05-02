@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import { LaraService } from '../../_services/lara.service';
-import { TokenService} from '../../_services/token.service';
-import {Title} from "@angular/platform-browser";
+import { TokenService } from '../../_services/token.service';
 
 @Component({
   selector: 'app-register',
@@ -17,7 +17,7 @@ export class RegisterComponent implements OnInit {
     email: null,
     password: null,
     password_confirmation: null
-  }
+  };
 
   error = {
     name: null,
@@ -28,14 +28,14 @@ export class RegisterComponent implements OnInit {
   constructor(
     private Token: TokenService,
     private Lara: LaraService,
-    private _router: Router,
-    private _app_title: Title
+    private appRouter: Router,
+    private appTitle: Title
   ) {
-    this._app_title.setTitle('Sign Up · Christopher');
+    this.appTitle.setTitle('Sign Up · Christopher');
   }
 
   ngOnInit(): void {
-    this._app_title.setTitle('Sign Up · Christopher');
+    this.appTitle.setTitle('Sign Up · Christopher');
   }
 
   handleErrors(error) {
@@ -51,7 +51,7 @@ export class RegisterComponent implements OnInit {
   }
   responseHandler(data) {
     this.Token.handle(data.access_token);
-    this._router.navigateByUrl('/admin');
+    this.appRouter.navigateByUrl('/admin');
   }
 
 }

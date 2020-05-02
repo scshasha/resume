@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Skill } from "../_models/skill.model";
-import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../environments/environment";
-import {AuthService} from "./auth.service";
+import { Skill } from '../_models/skill.model';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../environments/environment';
+import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'

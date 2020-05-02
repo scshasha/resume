@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from "@angular/platform-browser";
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +9,13 @@ import {Title} from "@angular/platform-browser";
 export class DashboardComponent implements OnInit {
 
   constructor(
-    private _app_title: Title
+    private appTitle: Title
   ) {
-    this._app_title.setTitle('Administrator · Christopher');
+    this.appTitle.setTitle('Administrator · Christopher');
   }
 
   ngOnInit(): void {
-    this._app_title.setTitle('Administrator · Christopher');
+    this.appTitle.setTitle('Administrator · Christopher');
   }
 
 }
