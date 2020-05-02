@@ -1,3 +1,3 @@
-# Resume App with Angular
+# Resume App with Angular + Express + MongoDB
 
 Just another Angular application.
