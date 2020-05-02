@@ -26,53 +26,55 @@ import { ContactComponent } from './contact/contact.component';
 import { PolicyComponent } from './pages/policy/policy.component';
 import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import {LaraService} from "./shared/_services/lara.service";
-import {TokenService} from "./shared/_services/token.service";
-import {AuthService} from "./shared/_services/auth.service";
-import {AuthGuardService} from "./shared/_services/auth-guard.service";
-import {UnauthGuardService} from "./shared/_services/unauth-guard.service";
+import {LaraService} from './shared/_services/lara.service';
+import {TokenService} from './shared/_services/token.service';
+import {AuthService} from './shared/_services/auth.service';
+import {AuthGuardService} from './shared/_services/auth-guard.service';
+import {UnauthGuardService} from './shared/_services/unauth-guard.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    AboutUsComponent,
-    WelcomeComponent,
-    SkillsComponent,
-    SkillComponent,
-    WorkComponent,
-    FooterComponent,
-    ContactComponent,
-    PolicyComponent,
-    FourohfourComponent,
-    LoginComponent,
-    ComingsoonComponent,
-    DashboardComponent,
-    RegisterComponent,
-    RequestResetComponent,
-    ResetResponseComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    SnotifyModule
-  ],
-  providers: [
-    LaraService,
-    TokenService,
-    AuthService,
-    AuthGuardService,
-    UnauthGuardService,
-    Title,
-    {
-      provide: 'SnotifyToastConfig',
-      useValue: ToastDefaults
-    },
-    SnotifyService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        AboutUsComponent,
+        WelcomeComponent,
+        SkillsComponent,
+        SkillComponent,
+        WorkComponent,
+        FooterComponent,
+        ContactComponent,
+        PolicyComponent,
+        FourohfourComponent,
+        LoginComponent,
+        ComingsoonComponent,
+        DashboardComponent,
+        RegisterComponent,
+        RequestResetComponent,
+        ResetResponseComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        SnotifyModule,
+        FontAwesomeModule
+    ],
+    providers: [
+        LaraService,
+        TokenService,
+        AuthService,
+        AuthGuardService,
+        UnauthGuardService,
+        Title,
+        {
+            provide: 'SnotifyToastConfig',
+            useValue: ToastDefaults
+        },
+        SnotifyService
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
