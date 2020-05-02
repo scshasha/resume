@@ -6,7 +6,7 @@ Yeah, I'm not really good with naming projects... well, this is just another Ang
 
 ---
 
-> *The ~Project~ Brief*
+## *The ~Project~ Brief*
 
 Build a portfolio web application and demonstrate your frontend + backend knowledge.
 
@@ -22,9 +22,10 @@ Build a portfolio web application and demonstrate your frontend + backend knowle
 
 Execute:
 ````
-git clone .git resume
+git clone https://github.com/scshasha/resume.git resume
 cd resume
 npm install
 npm start
-
 ```
+
+Now browse [http://localhost:4200](http://localhost:4200) :shipit:
