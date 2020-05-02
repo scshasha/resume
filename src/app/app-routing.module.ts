@@ -27,6 +27,10 @@ const routes: Routes = [
   { path: 'contact-me', component: ContactComponent },
   { path: 'coming-soon', component: ComingsoonComponent },
   { path: 'page-not-found', component: FourohfourComponent },
+  {
+    path: 'xyz',
+    loadChildren: 'app/admin-dashboard/admin-dashboard.module#AdminDashboardModule'
+  }
 
   /** Restricted routes. */
   { path: 'user/login', component: LoginComponent, canActivate: [UnauthGuardService] },

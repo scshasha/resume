@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,6 +17,7 @@ import { RegisterComponent } from './shared/_components/register/register.compon
 import { RequestResetComponent } from './shared/_components/password/request-reset/request-reset.component';
 import { ResetResponseComponent } from './shared/_components/password/reset-response/reset-response.component';
 import { LoginComponent } from './shared/_components/login/login.component';
+import { MaterialModule } from './shared/material.module';
 import { ComingsoonComponent } from './pages/comingsoon/comingsoon.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -60,7 +63,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         FormsModule,
         HttpClientModule,
         SnotifyModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        BrowserAnimationsModule,
+        MaterialModule
     ],
     providers: [
         LaraService,
