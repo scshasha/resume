@@ -78,7 +78,16 @@ export class ProjectsService {
       'assets/uploads/thumbnails/screenshot-11.png',
       ``,
       3),
+    new Project(
+      'BafanaWebs&Graphics Agency',
+      'Logo Design',
+      'assets/uploads/thumbnails/screenshot-12.png',
+      ``,
+      5),
   ];
+
+
+
 
   get() {
     return this.projects;
