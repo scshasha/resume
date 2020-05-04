@@ -7,7 +7,7 @@ Yeah, I'm not really good with naming projects... well, this is just another Ang
 
 ### The ~Project~ Brief
 
-Build a portfolio web application and demonstrate your frontend + backend knowledge.
+Build a portfolio web application and demonstrate your frontend + backend knowledge. Going MEAN!!!!
 
 ---
 
