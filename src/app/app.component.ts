@@ -16,8 +16,12 @@ export class AppComponent {
   }
 
   includeHeader() {
+    /** @todo find an effecient way to do this */
     switch (this.appRouter.url) {
       case '/page-not-found':
+      case '/xyz':
+      case '/xyz/projects':
+      case '/xyz/skills':
         return false;
       default:
         return true;
@@ -30,6 +34,9 @@ export class AppComponent {
       case '/user/new':
       case '/reset/request':
       case '/administrator':
+      case '/xyz':
+      case '/xyz/projects':
+      case '/xyz/skills':
         return false;
       default:
         return true;

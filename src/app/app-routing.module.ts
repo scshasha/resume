@@ -29,8 +29,9 @@ const routes: Routes = [
   { path: 'page-not-found', component: FourohfourComponent },
   {
     path: 'xyz',
-    loadChildren: 'app/admin-dashboard/admin-dashboard.module#AdminDashboardModule'
-  }
+    loadChildren: () => import('./admin-dashboard/admin-dashboard.module')
+      .then(m => m.AdminDashboardModule)
+  },
 
   /** Restricted routes. */
   { path: 'user/login', component: LoginComponent, canActivate: [UnauthGuardService] },

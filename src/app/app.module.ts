@@ -17,7 +17,7 @@ import { RegisterComponent } from './shared/_components/register/register.compon
 import { RequestResetComponent } from './shared/_components/password/request-reset/request-reset.component';
 import { ResetResponseComponent } from './shared/_components/password/reset-response/reset-response.component';
 import { LoginComponent } from './shared/_components/login/login.component';
-import { MaterialModule } from './shared/material.module';
+
 import { ComingsoonComponent } from './pages/comingsoon/comingsoon.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -64,8 +64,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         HttpClientModule,
         SnotifyModule,
         FontAwesomeModule,
-        BrowserAnimationsModule,
-        MaterialModule
+        BrowserAnimationsModule
     ],
     providers: [
         LaraService,

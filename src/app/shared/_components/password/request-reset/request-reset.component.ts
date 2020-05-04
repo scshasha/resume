@@ -29,7 +29,7 @@ export class RequestResetComponent implements OnInit {
   onSubmit() {
     this.Lara.sendPasswordResetLink(this.form).subscribe(
       (data) => this.handleResponse(data),
-      (error) => this.appNotifcationService.error(error.error.error)
+      (error) => this.appNotificationService.error(error.error.error)
     );
   }
 
