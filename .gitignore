@@ -50,3 +50,6 @@ Thumbs.db
 Dockerfile
 docker-*
 .dockerignore
+
+# Backend code
+/server
