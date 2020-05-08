@@ -1,7 +1,7 @@
 <mat-toolbar>
   <h3>Projects</h3>
   <div class="pull-right btn-pull-right">
-    <button mat-stroked-button color="primary" (click)="newProjectHandler()">
+    <button mat-stroked-button color="primary" (click)="createProjectActionHandler()">
       <mat-icon>add</mat-icon>
       <span>New Project</span>
     </button>
@@ -20,12 +20,12 @@
 
   <ng-container matColumnDef="created">
     <th mat-header-cell *matHeaderCellDef> Created </th>
-    <td mat-cell *matCellDef="let project"> {{project.created_at|date}} </td>
+    <td mat-cell *matCellDef="let project"> {{ project.created_at|date :'medium' }} </td>
   </ng-container>
 
   <ng-container matColumnDef="updated">
     <th mat-header-cell *matHeaderCellDef> Updated </th>
-    <td mat-cell *matCellDef="let project"> {{project.updated_at|date}} </td>
+    <td mat-cell *matCellDef="let project"> {{ project.updated_at|date :'medium' }} </td>
   </ng-container>
   <ng-container matColumnDef="action">
     <th mat-header-cell *matHeaderCellDef> Action </th>
@@ -34,11 +34,11 @@
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #action_menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item (click)="updateProjectActionHandler(project._id)">
           <mat-icon>edit</mat-icon>
           <span>Edit</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="deleteProjectActionHandler(project._id)">
           <mat-icon>delete</mat-icon>
           <span>Delete</span>
         </button>

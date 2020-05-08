@@ -17,12 +17,11 @@ export class AppComponent {
 
   includeHeader() {
     /** @todo find an effecient way to do this */
+    if (this.appRouter.url.includes('/xyz')) {
+      return false;
+    }
     switch (this.appRouter.url) {
       case '/page-not-found':
-      case '/xyz':
-      case '/xyz/projects':
-      case '/xyz/projects/new':
-      case '/xyz/skills':
         return false;
       default:
         return true;
@@ -30,15 +29,14 @@ export class AppComponent {
   }
 
   includeFooter() {
+    if (this.appRouter.url.includes('/xyz')) {
+      return false;
+    }
     switch (this.appRouter.url) {
       case '/user/login':
       case '/user/new':
       case '/reset/request':
       case '/administrator':
-      case '/xyz':
-      case '/xyz/projects':
-      case '/xyz/projects/new':
-      case '/xyz/skills':
         return false;
       default:
         return true;
