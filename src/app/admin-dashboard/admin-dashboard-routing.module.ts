@@ -1,3 +1,4 @@
+import { ProjectFormComponent } from './../projects/components/project-form/project-form.component';
 import { AdminDashboardComponent } from './admin-dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'projects',
         component: ProjectListComponent
+      },
+      {
+        path: 'projects/new',
+        component: ProjectFormComponent
       },
       {
         path: 'skills',
