@@ -21,6 +21,7 @@ export class AppComponent {
       case '/page-not-found':
       case '/xyz':
       case '/xyz/projects':
+      case '/xyz/projects/new':
       case '/xyz/skills':
         return false;
       default:
@@ -36,6 +37,7 @@ export class AppComponent {
       case '/administrator':
       case '/xyz':
       case '/xyz/projects':
+      case '/xyz/projects/new':
       case '/xyz/skills':
         return false;
       default:
