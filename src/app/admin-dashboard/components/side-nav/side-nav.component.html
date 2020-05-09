@@ -11,6 +11,7 @@
       </mat-toolbar>
       <mat-nav-list>
         <mat-list>
+          <a routerLink="/welcome" mat-list-item>Resume</a>
           <a mat-list-item *ngFor="let link of links" [routerLink]="link.url">{{ link.name }}</a>
         </mat-list>
       </mat-nav-list>

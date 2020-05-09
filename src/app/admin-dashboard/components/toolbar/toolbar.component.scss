@@ -1,6 +1,12 @@
+@import '../../../../styles';
 $iconWidth: 56px;
+
+.mat-toolbar {
+  background: $color-primary-dark !important;
+  color: $color-secondary-bright;
+}
 .sidenav-toggle {
-  display: none;
+  //display: none;
   padding: 0px;
   margin: 8px;
   min-width: $iconWidth;

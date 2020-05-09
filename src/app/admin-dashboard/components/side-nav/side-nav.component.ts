@@ -21,6 +21,6 @@ export class SideNavComponent implements OnInit {
   }
 
   isMobileDeviceScreen() {
-    return this.mediaMatcher.matches;
+    return true; // this.mediaMatcher.matches;
   }
 }
