@@ -1,4 +1,27 @@
-mat-form-field {
-  width: 100%;
+mat-toolbar {
+  button {
+    position: absolute;
+    right: 5%;
+  }
+}
+mat-card {
+  form {
+    [class^="col-md-"],
+    [class^="col-lg-"]{
+      @media (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+
+    .col-lg-8.col-md-7 {
+      @media (min-width: 768px) {
+        position: absolute;
+      }
+    }
+
+    mat-form-field {
+      width: 100%;
+    }
+  }
 }
 

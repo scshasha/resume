@@ -1,36 +1,56 @@
+<mat-toolbar>
+  <h1>Tell us more about your Project</h1>
+  <button mat-stroked-button color="primary" class="pull-right" (click)="onCancel()">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <span>Back</span>
+  </button>
+</mat-toolbar>
 <mat-card>
-  <h3>Tell us more about your Project</h3>
   <form class="form-container" [formGroup]="projectForm" novalidate (ngSubmit)="onSubmit()" class="m-auto w-100">
-    <mat-form-field>
-      <input matInput placeholder="What is the projects name?" formControlName="name">
-      <mat-error *ngIf="projectForm.controls.name.invalid && projectForm.controls.name.touched">Project *name is required!</mat-error>
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <input matInput placeholder="Is there a url for it? If so please enter it here." formControlName="url">
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <input matInput placeholder="Do you have a sreenshot of the project?" formControlName="thumbnail">
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <mat-select placeholder="Select the best suitable category for the project." formControlName="category">
-        <mat-option value="WordPress">WordPress</mat-option>
-        <mat-option value="Drupal">Drupal</mat-option>
-        <mat-option value=".Net">.Net</mat-option>
-        <mat-option value="Adobe Photoshop">Adobe Photoshop</mat-option>
-      </mat-select>
-      <mat-error *ngIf="projectForm.controls.category.invalid && projectForm.controls.category.touched">Project *category is required!</mat-error>
-    </mat-form-field>
-    <br>
-    <mat-form-field>
-      <textarea matInput placeholder="How would you describe this project? Briefs? Solutions? Tools?" formControlName="description"></textarea>
-      <mat-error *ngIf="projectForm.controls.description.invalid && projectForm.controls.description.touched">A brief *description for this project is required!</mat-error>
-    </mat-form-field>
-    <div class="w-100 mt-5">
-      <button type="submit" color="primary" mat-raised-button class="mr-5" [disabled]="!projectForm.valid">Save</button>
-      <button type="reset" mat-raised-button (click)="onCancel()">Cancel</button>
+    <div class="col-lg-4 col-md-5 col-sm-12">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput placeholder="What is the projects name?" formControlName="name">
+          <mat-error *ngIf="projectForm.controls.name.invalid && projectForm.controls.name.touched">Project *name is required!</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-select placeholder="Select the best suitable category for the project." formControlName="category">
+            <mat-option value="WordPress">WordPress</mat-option>
+            <mat-option value="Drupal">Drupal</mat-option>
+            <mat-option value=".Net">.Net</mat-option>
+            <mat-option value="Adobe Photoshop">Adobe Photoshop</mat-option>
+          </mat-select>
+          <mat-error *ngIf="projectForm.controls.category.invalid && projectForm.controls.category.touched">Project *category is required!</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput placeholder="Is there a url for it? If so please enter it here." formControlName="url">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="col-lg-8 col-md-7 col-sm-12">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput placeholder="project screenshot?" formControlName="thumbnail">
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <textarea rows="2" matInput placeholder="How would you describe this project? Briefs? Solutions? Tools?" formControlName="description"></textarea>
+          <mat-error *ngIf="projectForm.controls.description.invalid && projectForm.controls.description.touched">A brief *description for this project is required!</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-group">
+        <button type="submit" color="primary" mat-raised-button class="mr-5" [disabled]="!projectForm.valid">Save</button>
+        <button type="reset" mat-raised-button>Clear</button>
+      </div>
     </div>
   </form>
 
