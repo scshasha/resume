@@ -1,5 +1,5 @@
 import {Component, NgZone, OnInit} from '@angular/core';
-const MAX_MOBILE_WIDTH_BREAK_POINT = 720;
+const MAX_MOBILE_WIDTH_BREAK_POINT = 745;
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
