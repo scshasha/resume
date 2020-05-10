@@ -34,12 +34,16 @@
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #action_menu="matMenu">
+        <button mat-menu-item (click)="viewProjectActionHandler(project._id)">
+          <mat-icon>pageview</mat-icon>
+          <span>View</span>
+        </button>
         <button mat-menu-item (click)="updateProjectActionHandler(project._id)">
           <mat-icon>edit</mat-icon>
           <span>Edit</span>
         </button>
         <button mat-menu-item (click)="deleteProjectActionHandler(project._id)">
-          <mat-icon>delete</mat-icon>
+          <mat-icon>delete_forever</mat-icon>
           <span>Delete</span>
         </button>
       </mat-menu>

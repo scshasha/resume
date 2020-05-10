@@ -7,7 +7,8 @@ import {remove} from 'lodash';
 
 import {Project} from '../../models/project';
 import {ProjectService} from '../../services/project.service';
-import {ConfirmDelDialogComponent} from './confirm-del-dialog.component';
+import {DeleteConfirmationDialogComponent} from './dialogs/delete/delete-confirmation-dialog.component';
+import {ProjectDetailsDialogComponent} from './dialogs/details/project-details-dialog.component';
 
 
 @Component({
@@ -53,7 +54,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   deleteProjectActionHandler(id: string) {
-    const confirmationDialog = this.dialog.open(ConfirmDelDialogComponent, {
+    const confirmationDialog = this.dialog.open(DeleteConfirmationDialogComponent, {
         width: '350px',
       }
     );
@@ -68,7 +69,7 @@ export class ProjectListComponent implements OnInit {
               });
               this.dataSource = [...this.dataSource]; /** Tells Angular to update variable. */
               this.snackBar.open('Project deleted!', 'Success', {
-                duration: 8000
+                duration: 4000
               });
             }, err => this.handleError(err, 'Whoops, failed to delete project!')
           );
@@ -76,8 +77,26 @@ export class ProjectListComponent implements OnInit {
     });
 
   }
+  viewProjectActionHandler(id: string): void {
+    // @todo View project details on a modal
+    // const viewProjectDetailsDialog = this.dialog.open(ProjectDetailsDialogComponent, {
+    //   width: '100%'
+    // });
+    let selected = null;
+    this.dataSource.forEach(project => {
+      if (id === project._id) {
+        selected = project;
+      }
+    });
+    if (selected) {
+      const dialogRef = this.dialog.open(ProjectDetailsDialogComponent, {
+        data: selected
+      });
 
-  private confirmDeleteDialog(): void {
+      dialogRef.afterClosed().subscribe(result => {
+        console.log(`Dialog result: ${result}`);
+      });
+    }
 
   }
 }
