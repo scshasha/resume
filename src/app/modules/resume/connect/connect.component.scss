@@ -1,0 +1,63 @@
+@import '../../../../styles';
+
+.contact {
+  position: relative;
+  h1 {
+    text-align: right;
+    font-size: 10rem;
+    opacity: .25;
+    font-weight: 900;
+  }
+
+  p {
+    text-align: center;
+    color: $color-text-whitish;
+    font-size: $para_default_size;
+    padding: 20px;
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  form {
+    input, textarea {
+      display: block;
+      width: 500px;
+      padding: 20px;
+      background-color: $color-primary-dark;
+      border: 3px solid $color-secondary-dark;
+      margin: 20px 0;
+      outline: none;
+      font-size: 1.2rem;
+      color: $color-text-whitish;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+
+      //& :focus {
+      //  outline: $color-secondary-bright;
+      //}
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: $color-secondary-bright !important;
+      box-shadow: 0 0 0 0.2rem rgba(255, 202, 40, 0.28);
+    }
+
+    input[type="submit"] {
+      width: 150px;
+      background: transparent;
+      cursor: pointer;
+      border: 2px solid $color-primary-bright;
+      /* height: 50px; */
+      /* padding: 0; */
+      color: $color-primary-bright;
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+  }
+}

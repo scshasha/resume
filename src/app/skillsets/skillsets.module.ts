@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MaterialModule } from '../shared/material.module';
+import { MaterialModule } from '../shared/modules/material.module';
 
 import { SkillsetListComponent } from './components/skillset-list/skillset-list.component';
 

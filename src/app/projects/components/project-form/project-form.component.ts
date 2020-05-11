@@ -14,6 +14,7 @@ import { Project } from '../../models/project';
 })
 export class ProjectFormComponent implements OnInit {
 
+  // tslint:disable-next-line:variable-name
   private _project: Project;
   projectForm: FormGroup;
 
@@ -35,21 +36,21 @@ export class ProjectFormComponent implements OnInit {
     if (this._project) {
       this.projectService.updateProject(this._project._id, this.projectForm.value).subscribe(
         data => {
-          this.snackBar.open('Project Updated!', 'Success', {
+          this.snackBar.open('Project updated!', 'Success', {
             duration: 4000
           });
           this._gotolist();
-        },err => this.handleError(err, 'Whoops, failed to update project!')
-      )
+        }, err => this.handleError(err, 'Whoops, failed to update project!')
+      );
     }
     else {
       this.projectService.createProject(this.projectForm.value)
       .subscribe(data => {
-        this.snackBar.open('Project created successfully!', 'Success', {
+        this.snackBar.open('Project created!', 'Success', {
           duration: 4000
         });
         this._gotolist();
-      },err => this.handleError(err, 'Whoops, failed to create project!'));
+      }, err => this.handleError(err, 'Whoops, failed to create project!'));
     }
 
   }
@@ -87,7 +88,7 @@ export class ProjectFormComponent implements OnInit {
   private setEditableFormData() {
     this.route.params.subscribe(
       params => {
-        let id = params['id'];
+        const id = params.id;
         if (!id) {
           return;
         }
@@ -96,10 +97,13 @@ export class ProjectFormComponent implements OnInit {
             this._project = data;
             this.projectForm.patchValue(this._project);
           }, err => this.handleError(err, 'Whoops, failed to fetch project!')
-        )
+        );
       }
-    )
+    );
 
   }
 
+  onFileSelected() {
+
+  }
 }

@@ -2,29 +2,39 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatDialogRef} from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
 
-import { MaterialModule } from '../shared/material.module';
+import { MaterialModule } from '../shared/modules/material.module';
 
 import { ProjectListComponent } from './components/project-list/project-list.component';
 import { ProjectService } from './services/project.service';
 import { ProjectFormComponent } from './components/project-form/project-form.component';
-import {ConfirmDelDialogComponent} from './components/project-list/confirm-del-dialog.component';
-import {MatDialogRef} from '@angular/material/dialog';
+import {DeleteConfirmationDialogComponent} from './components/project-list/dialogs/delete/delete-confirmation-dialog.component';
+import {ProjectDetailsDialogComponent} from './components/project-list/dialogs/details/project-details-dialog.component';
+
 
 
 @NgModule({
-  declarations: [ProjectListComponent, ProjectFormComponent, ConfirmDelDialogComponent],
-  imports: [
-    CommonModule,
-    MaterialModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
+  declarations: [
+    ProjectListComponent,
+    ProjectFormComponent,
+    DeleteConfirmationDialogComponent,
+    ProjectDetailsDialogComponent
   ],
+    imports: [
+        CommonModule,
+        MaterialModule,
+        HttpClientModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatExpansionModule
+    ],
   exports: [
     ProjectListComponent,
     ProjectFormComponent,
-    ConfirmDelDialogComponent
+    DeleteConfirmationDialogComponent,
+    ProjectDetailsDialogComponent
   ],
   providers: [
     ProjectService,

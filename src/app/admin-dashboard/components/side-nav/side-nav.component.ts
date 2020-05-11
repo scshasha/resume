@@ -21,6 +21,12 @@ export class SideNavComponent implements OnInit {
   }
 
   isMobileDeviceScreen() {
-    return true; // this.mediaMatcher.matches;
+    return this.mediaMatcher.matches;
+  }
+
+  appToggleClose(sidenav) {
+    if (this.isMobileDeviceScreen()) {
+      sidenav.close();
+    }
   }
 }

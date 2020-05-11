@@ -7,12 +7,23 @@
       [opened]="!isMobileDeviceScreen()"
       #sidenav>
       <mat-toolbar color="primary">
-        <span>Console</span>
+        <span>Dashboard</span>
       </mat-toolbar>
       <mat-nav-list>
         <mat-list>
-          <a routerLink="/welcome" mat-list-item>Resume</a>
-          <a mat-list-item *ngFor="let link of links" [routerLink]="link.url">{{ link.name }}</a>
+          <a routerLink="/xyz" mat-list-item (click)="appToggleClose(sidenav)">
+            <span><i class="fa fa-dashboard mr-1"></i>Overview</span>
+          </a>
+          <a mat-list-item *ngFor="let link of links; let i = index" [routerLink]="link.url" (click)="appToggleClose(sidenav)">
+            <span><i class="fa mr-1" [ngClass]="(i === 0) ? 'fa-table':'fa-line-chart'"></i>{{ link.name }}</span>
+          </a>
+          <hr>
+          <a routerLink="/welcome" mat-list-item>
+            <span><i class="fa fa-link mr-1"></i>Visit site</span>
+          </a>
+          <a routerLink="/welcome" mat-list-item>
+            <span><i class="fa fa-sign-out mr-1"></i>Logout</span>
+          </a>
         </mat-list>
       </mat-nav-list>
     </mat-sidenav>

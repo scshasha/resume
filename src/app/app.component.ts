@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {Router} from '@angular/router';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,12 @@ export class AppComponent {
   }
 
   includeFooter() {
+    $.getScript('assets/js/animation.gsap.min.js');
+    $.getScript('assets/js/TimelineLite.min.js');
+    $.getScript('assets/js/TweenMax.min.js');
+    $.getScript('assets/js/ScrollMagic.min.js');
+    $.getScript('assets/js/CSSPlugin.min.js');
+    $.getScript('assets/js/main.js');
     if (this.appRouter.url.includes('/xyz')) {
       return false;
     }
@@ -42,8 +49,6 @@ export class AppComponent {
         return true;
     }
   }
-
-
 
   setAppTitle(title: string) {
     this.appTitleService.setTitle(title);
