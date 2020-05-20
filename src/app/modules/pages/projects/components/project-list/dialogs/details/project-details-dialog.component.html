@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Project Details</h2>
+<mat-dialog-content class="mat-typography">
+  <h3></h3>
+  <div class="col-md-4">
+    <img src="/assets/uploads/thumbnails/screenshot-7.png" alt="{{ data.name }}" class="img-fluid img-responsive" max-width="100%" />
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <span><strong>Name: </strong>{{ data.name }}</span>
+    </div>
+    <hr>
+    <div class="row">
+      <span><a href="" target="_blank">{{ data.url }}</a></span>
+    </div>
+    <hr>
+    <div class="row">
+      <span><strong>About the project:</strong></span>
+      <p>
+        {{ data.description }}
+      </p>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+<!--  <button mat-button mat-dialog-close>Cancel</button>-->
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Close</button>
+</mat-dialog-actions>
+
+

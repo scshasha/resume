@@ -1,0 +1,22 @@
+<mat-nav-list>
+  <h2 mat-subheader>Pages</h2>
+
+  <a mat-list-item routerLink="/manage" routerLinkActive="list-item-active">
+    <mat-icon class="mat-18">dashboard</mat-icon>
+    <span>Dashboard</span>
+  </a>
+  <a *ngFor="let link of links"
+    mat-list-item routerLink="{{link.url}}" routerLinkActive="list-item-active">
+    <mat-icon class="mat-18">{{ link.icon }}</mat-icon>
+    <span>{{ link.name }}</span>
+  </a>
+
+
+  <h2 mat-subheader>Tools</h2>
+  <a mat-list-item routerLink="repositories" routerLinkActive="list-item-active">
+    <mat-icon>code</mat-icon>
+    <span>Repo</span>
+  </a>
+
+
+</mat-nav-list>

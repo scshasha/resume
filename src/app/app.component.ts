@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {Router} from '@angular/router';
+import $ from 'jquery';
 
 @Component({
   selector: 'app-root',
@@ -11,32 +12,47 @@ export class AppComponent {
   title = 'chris-shasha';
   router: Router;
 
+  private readonly ignoreFooterOrHeaderForRoute = [
+    '/manage',
+    '/admin',
+    '/xyz'
+  ];
+
   // tslint:disable-next-line:variable-name
-  constructor(private appTitleService: Title, private _router: Router) {
+  constructor(private appTitleService: Title, private appRouter: Router) {
   }
 
-  includeHeader() {
-    switch (this._router.url) {
+  includeHeader(): boolean {
+    return false;
+    console.log(this.ignoreFooterOrHeaderForRoute);
+    this.ignoreFooterOrHeaderForRoute.forEach(route => {
+      const r = '\'' + route + '\'';
+      if (this.appRouter.url.includes(r)) {
+        console.log(this.appRouter.url);
+        console.log(route);
+        return false;
+      }
+    }); // This doesn't work... Why?? @todo: Fix
+    switch (this.appRouter.url) {
       case '/page-not-found':
+      case '/manage':
+      case '/admin':
+      case '/xyz':
         return false;
-      default:
-        return true;
     }
+    return true;
   }
 
-  includeFooter() {
-    switch (this._router.url) {
-      case '/user/login':
-      case '/user/new':
-      case '/reset/request':
-      case '/administrator':
+  includeFooter(): boolean {
+    return false;
+    switch (this.appRouter.url) {
+      case '/manage':
+      case '/admin':
+      case '/xyz':
         return false;
-      default:
-        return true;
     }
+    return true;
   }
-
-
 
   setAppTitle(title: string) {
     this.appTitleService.setTitle(title);

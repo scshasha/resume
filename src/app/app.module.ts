@@ -1,73 +1,49 @@
 import {BrowserModule, Title} from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
-import { SnotifyModule, SnotifyService, ToastDefaults } from 'ng-snotify';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
 
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 
-import { HeaderComponent } from './shared/_components/header/header.component';
-import { FooterComponent } from './shared/_components/footer/footer.component';
-import { RegisterComponent } from './shared/_components/register/register.component';
-import { RequestResetComponent } from './shared/_components/password/request-reset/request-reset.component';
-import { ResetResponseComponent } from './shared/_components/password/reset-response/reset-response.component';
-import { LoginComponent } from './shared/_components/login/login.component';
-import { ComingsoonComponent } from './pages/comingsoon/comingsoon.component';
-
-import { AboutUsComponent } from './about-us/about-us.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { SkillsComponent } from './skills/skills.component';
-import { SkillComponent } from './skills/skill/skill.component';
-import { WorkComponent } from './work/work.component';
-import { ContactComponent } from './contact/contact.component';
-import { PolicyComponent } from './pages/policy/policy.component';
-import { FourohfourComponent } from './pages/fourohfour/fourohfour.component';
-import { DashboardComponent } from './admin/dashboard/dashboard.component';
-import {LaraService} from './shared/_services/lara.service';
-import {TokenService} from './shared/_services/token.service';
-import {AuthService} from './shared/_services/auth.service';
-import {AuthGuardService} from './shared/_services/auth-guard.service';
-import {UnauthGuardService} from './shared/_services/unauth-guard.service';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { ComingsoonComponent } from './shared/components/comingsoon/comingsoon.component';
+import { PolicyComponent } from './modules/pages/policy/policy.component';
+import { FourohfourComponent } from './shared/components/fourohfour/fourohfour.component';
+import {ResumeModule} from './modules/resume/resume.module';
+import {DefaultModule} from './layouts/default/default.module';
+import {MaterialModule} from './shared/modules/material.module';
 
 
 @NgModule({
     declarations: [
         AppComponent,
         HeaderComponent,
-        AboutUsComponent,
-        WelcomeComponent,
-        SkillsComponent,
-        SkillComponent,
-        WorkComponent,
         FooterComponent,
-        ContactComponent,
         PolicyComponent,
         FourohfourComponent,
-        LoginComponent,
-        ComingsoonComponent,
-        DashboardComponent,
-        RegisterComponent,
-        RequestResetComponent,
-        ResetResponseComponent,
+        ComingsoonComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpClientModule,
         SnotifyModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        BrowserAnimationsModule,
+        MaterialModule,
+        ResumeModule,
+        DefaultModule
     ],
     providers: [
-        LaraService,
-        TokenService,
-        AuthService,
-        AuthGuardService,
-        UnauthGuardService,
         Title,
         {
             provide: 'SnotifyToastConfig',
