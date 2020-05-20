@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {Router} from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatPaginator, PageEvent} from '@angular/material/paginator';
+
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 
 import {remove} from 'lodash';
-
 import {Project} from '../../models/project';
 import {ProjectService} from '../../services/project.service';
 import {DeleteConfirmationDialogComponent} from './dialogs/delete/delete-confirmation-dialog.component';
@@ -17,10 +18,10 @@ import {ProjectDetailsDialogComponent} from './dialogs/details/project-details-d
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
+  // @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   public displayedColumns: string[] = ['name', 'category', 'created', 'updated', 'action'];
   public dataSource: Project[] = [];
-  private confirmDelete = '';
 
   constructor(
     private projectService: ProjectService,
@@ -46,11 +47,11 @@ export class ProjectListComponent implements OnInit {
   }
 
   createProjectActionHandler() {
-    this.router.navigate(['xyz', 'projects', 'new']);
+    this.router.navigate(['manage', 'projects', 'new']);
   }
 
   updateProjectActionHandler(id: string) {
-    this.router.navigate(['xyz', 'projects', 'edit', id]);
+    this.router.navigate(['manage', 'projects', 'edit', id]);
   }
 
   deleteProjectActionHandler(id: string) {
@@ -99,6 +100,7 @@ export class ProjectListComponent implements OnInit {
     }
 
   }
+
 }
 
 

@@ -13,6 +13,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   declarations: [],
@@ -30,7 +32,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatPaginatorModule
 
   ],
   exports: [
@@ -39,14 +43,16 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSidenavModule,
     MatToolbarModule,
     MatListModule,
-    MatCardModule,
     MatTableModule,
+    MatCardModule,
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }

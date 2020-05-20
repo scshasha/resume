@@ -1,6 +1,6 @@
 import {BrowserModule, Title} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -13,10 +13,12 @@ import {AppComponent} from './app.component';
 
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { ComingsoonComponent } from './modules/pages/comingsoon/comingsoon.component';
+import { ComingsoonComponent } from './shared/components/comingsoon/comingsoon.component';
 import { PolicyComponent } from './modules/pages/policy/policy.component';
-import { FourohfourComponent } from './modules/pages/fourohfour/fourohfour.component';
+import { FourohfourComponent } from './shared/components/fourohfour/fourohfour.component';
 import {ResumeModule} from './modules/resume/resume.module';
+import {DefaultModule} from './layouts/default/default.module';
+import {MaterialModule} from './shared/modules/material.module';
 
 
 @NgModule({
@@ -32,11 +34,14 @@ import {ResumeModule} from './modules/resume/resume.module';
         BrowserModule,
         AppRoutingModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpClientModule,
         SnotifyModule,
         FontAwesomeModule,
         BrowserAnimationsModule,
-        ResumeModule
+        MaterialModule,
+        ResumeModule,
+        DefaultModule
     ],
     providers: [
         Title,

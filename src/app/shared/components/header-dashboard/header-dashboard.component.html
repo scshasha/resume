@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="dashSideNavToggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span> Dashboard </span>
+
+        <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+            <ul fxLayout="row" fxLayoutGap="20px">
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>settings</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-icon-button>
+                        <mat-icon>help_outline</mat-icon>
+                    </button>
+                </li>
+                <li>
+                    <button mat-button [matMenuTriggerFor]="personMenu">
+                      <div class="profile-icon">
+                        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile-icon">
+                      </div>
+                    </button>
+
+                    <mat-menu #personMenu="matMenu">
+                        <mat-nav-list>
+                          <div class="profile-card text-center mb-5">
+                            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile-icon">
+                            <div class="header">
+                              <h4>Sivuyile Christopher Shasha</h4>
+                              <h5>shasha.christopher@gmail.com</h5>
+                            </div>
+                            <a href="">
+                              <div class="mt-5 btn-account-settings m-auto">
+                                  Manage Account
+                              </div>
+                            </a>
+
+                          </div>
+                          <mat-divider></mat-divider>
+
+                          <a mat-list-item >
+<!--                              <div style="padding: 10px 20px; border: 1px solid #eaeaea; border-radius: 5px; text-align: center;" class="m-auto">Sign out</div>-->
+                              <div style="text-align: center;" class="m-auto">Sign out</div>
+                          </a>
+                        </mat-nav-list>
+                    </mat-menu>
+                </li>
+            </ul>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>

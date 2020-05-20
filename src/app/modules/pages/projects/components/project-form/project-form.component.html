@@ -52,10 +52,8 @@
       </div>
 
       <div class="form-group">
-<!--        <mat-form-field>-->
-          <button type="button" mat-raised-button (click)="fileInput.click()">Choose File</button>
-          <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
-<!--        </mat-form-field>-->
+        <img [src]="screenshotPreview" alt="" *ngIf="screenshotPreview" class="img-thumbnail" />
+        <app-file-upload formControlName="image" [progress]="progress" (selectedFile)="onFileChange($event)"></app-file-upload>
       </div>
     </div>
 

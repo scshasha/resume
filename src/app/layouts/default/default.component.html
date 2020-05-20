@@ -1,0 +1,10 @@
+<app-header-dashboard (toggleSideBarNav)="toggleSidebar($event)"></app-header-dashboard>
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="isSidebarOpen">
+    <app-sidebarnav></app-sidebarnav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-footer-dashboard></app-footer-dashboard>

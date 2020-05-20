@@ -42,7 +42,7 @@ html {
   -ms-overflow-x: hidden;
 
   body {
-    background-color: $color-black;
+    // @todo: Remove comment. background-color: $color-black;
     max-width: 100%;
 
     .container {

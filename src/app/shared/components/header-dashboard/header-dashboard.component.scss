@@ -1,0 +1,60 @@
+mat-toolbar {
+  mat-toolbar-row {
+    ul {
+      margin-bottom: 0;
+      li {
+        list-style: none;
+
+
+
+        .profile-icon {
+          text-align: center;
+          width: 42px;
+          height: 42px;
+          & :hover {
+          }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            & :hover {
+              border: 5px solid #eaeaea;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.profile-card {
+  width: 250px !important;
+  text-align: center;
+  padding: 0px 20px;
+  img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  h5 {
+    color: #5f6368;
+  }
+  h4 {
+    color: #202124;
+    font-weight: bolder
+  ;
+  }
+  .btn-account-settings {
+    border-radius: 21px 21px;
+    padding: 10px 20px;
+    border: 1px solid #dadce0;
+    color: #3c4043;
+    text-align: center;
+    margin-top: 30px !important;
+    & :hover {
+      background: #f7f8f8;
+    }
+  }
+}

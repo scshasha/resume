@@ -1,9 +1,9 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ProjectService } from './../../services/project.service';
+import { ProjectService } from '../../services/project.service';
 import { Project } from '../../models/project';
 
 
@@ -17,6 +17,10 @@ export class ProjectFormComponent implements OnInit {
   // tslint:disable-next-line:variable-name
   private _project: Project;
   projectForm: FormGroup;
+  progress = 0;
+  selectedFile = null;
+  screenshotPreview = null;
+  formStepper = 1;
 
   constructor(
     private fb: FormBuilder,
@@ -32,6 +36,8 @@ export class ProjectFormComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.selectedFile);
+    return;
 
     if (this._project) {
       this.projectService.updateProject(this._project._id, this.projectForm.value).subscribe(
@@ -57,12 +63,12 @@ export class ProjectFormComponent implements OnInit {
 
 
   onCancel() {
-    this.router.navigate(['xyz', 'projects']);
+    this.router.navigate(['manage', 'projects']);
   }
 
   private _gotolist() {
     this.projectForm.reset();
-    this.router.navigate(['xyz', 'projects']);
+    this.router.navigate(['manage', 'projects']);
   }
 
   private initForm() {
@@ -74,6 +80,7 @@ export class ProjectFormComponent implements OnInit {
       category: [null, Validators.required],
       created_at: null,
       updated_at: null,
+      image: File
     });
   }
 
@@ -103,7 +110,34 @@ export class ProjectFormComponent implements OnInit {
 
   }
 
-  onFileSelected() {
-
+  onFileChange(event) {
+    const file: File = event;
+    if (file) {
+      // @ts-ignore
+      this.projectForm.image = file;
+      const r = new FileReader();
+      r.readAsDataURL(file);
+      r.onload = (e) => {
+        this.screenshotPreview = r.result;
+      };
+    }
   }
+}
+
+export function requiredFileType( type: string ) {
+  return (control: FormControl) => {
+    const file = control.value;
+    if ( file ) {
+      const extension = file.name.split('.')[1].toLowerCase();
+      if ( type.toLowerCase() !== extension.toLowerCase() ) {
+        return {
+          requiredFileType: true
+        };
+      }
+
+      return null;
+    }
+
+    return null;
+  };
 }

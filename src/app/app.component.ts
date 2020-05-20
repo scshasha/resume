@@ -12,42 +12,46 @@ export class AppComponent {
   title = 'chris-shasha';
   router: Router;
 
+  private readonly ignoreFooterOrHeaderForRoute = [
+    '/manage',
+    '/admin',
+    '/xyz'
+  ];
+
   // tslint:disable-next-line:variable-name
   constructor(private appTitleService: Title, private appRouter: Router) {
   }
 
-  includeHeader() {
-    /** @todo find an effecient way to do this */
-    if (this.appRouter.url.includes('/xyz')) {
-      return false;
-    }
+  includeHeader(): boolean {
+    return false;
+    console.log(this.ignoreFooterOrHeaderForRoute);
+    this.ignoreFooterOrHeaderForRoute.forEach(route => {
+      const r = '\'' + route + '\'';
+      if (this.appRouter.url.includes(r)) {
+        console.log(this.appRouter.url);
+        console.log(route);
+        return false;
+      }
+    }); // This doesn't work... Why?? @todo: Fix
     switch (this.appRouter.url) {
       case '/page-not-found':
+      case '/manage':
+      case '/admin':
+      case '/xyz':
         return false;
-      default:
-        return true;
     }
+    return true;
   }
 
-  includeFooter() {
-    $.getScript('assets/js/animation.gsap.min.js');
-    $.getScript('assets/js/TimelineLite.min.js');
-    $.getScript('assets/js/TweenMax.min.js');
-    $.getScript('assets/js/ScrollMagic.min.js');
-    $.getScript('assets/js/CSSPlugin.min.js');
-    $.getScript('assets/js/main.js');
-    if (this.appRouter.url.includes('/xyz')) {
-      return false;
-    }
+  includeFooter(): boolean {
+    return false;
     switch (this.appRouter.url) {
-      case '/user/login':
-      case '/user/new':
-      case '/reset/request':
-      case '/administrator':
+      case '/manage':
+      case '/admin':
+      case '/xyz':
         return false;
-      default:
-        return true;
     }
+    return true;
   }
 
   setAppTitle(title: string) {
