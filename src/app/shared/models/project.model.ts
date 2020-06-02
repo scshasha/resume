@@ -7,12 +7,15 @@ export class Project {
   public appUrl: string;
   public category: string;
 
-  categories: any = [
-    'All', 'Drupal', 'WordPress', 'Angular', '.Net', 'Adobe'
-  ];
+  categories: any = ['All', 'Drupal', 'WordPress', 'Angular'];
 
-
-  constructor(name: string, desc: string, imgPath: string, appUrl: string, category: number) {
+  constructor(
+    name: string,
+    desc: string,
+    imgPath: string,
+    appUrl: string,
+    category: number
+  ) {
     this.category = this.getCategory(category);
     this.name = name;
     this.desc = desc;

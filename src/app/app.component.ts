@@ -1,35 +1,30 @@
 import { Component } from '@angular/core';
-import {Title} from '@angular/platform-browser';
-import {Router} from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import $ from 'jquery';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
   title = 'chris-shasha';
   router: Router;
 
-  private readonly ignoreFooterOrHeaderForRoute = [
-    '/manage',
-    '/admin',
-    '/xyz'
-  ];
+  private readonly ignoreFooterOrHeaderForRoute = ['/manage', '/admin', '/xyz'];
 
   // tslint:disable-next-line:variable-name
-  constructor(private appTitleService: Title, private appRouter: Router) {
-  }
+  constructor(private appTitleService: Title, private appRouter: Router) {}
 
   includeHeader(): boolean {
-    return false;
-    console.log(this.ignoreFooterOrHeaderForRoute);
-    this.ignoreFooterOrHeaderForRoute.forEach(route => {
-      const r = '\'' + route + '\'';
+    // return false;
+    // console.log(this.ignoreFooterOrHeaderForRoute);
+    this.ignoreFooterOrHeaderForRoute.forEach((route) => {
+      const r = "'" + route + "'";
       if (this.appRouter.url.includes(r)) {
-        console.log(this.appRouter.url);
-        console.log(route);
+        // console.log(this.appRouter.url);
+        // console.log(route);
         return false;
       }
     }); // This doesn't work... Why?? @todo: Fix
@@ -44,7 +39,7 @@ export class AppComponent {
   }
 
   includeFooter(): boolean {
-    return false;
+    // return false;
     switch (this.appRouter.url) {
       case '/manage':
       case '/admin':
@@ -57,5 +52,4 @@ export class AppComponent {
   setAppTitle(title: string) {
     this.appTitleService.setTitle(title);
   }
-
 }

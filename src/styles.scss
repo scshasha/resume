@@ -1,21 +1,21 @@
-@import 'animate.scss';
-@import '../node_modules/ng-snotify/styles/material';
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "animate.scss";
+@import "../node_modules/ng-snotify/styles/material";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-$color-black: #1A1A1D;
-$color-black-light: #4E4E50;
-$color-maroon: #6F2232;
+$color-black: #1a1a1d;
+$color-black-light: #4e4e50;
+$color-maroon: #6f2232;
 $color-pink: #950740;
-$color-pink-light: #C3073F;
+$color-pink-light: #c3073f;
 
-$color-text-white: #FFFFFF;
-$color-text-whitish: #EAEAEA;
-$color-text-white-light: #EAEAEA;
+$color-text-white: #ffffff;
+$color-text-whitish: #eaeaea;
+$color-text-white-light: #eaeaea;
 
-$color-primary-dark: #1A1A1D;
-$color-secondary-dark: #4E4E50;
-$color-primary-bright: #FFCA28;
-$color-secondary-bright: #F7EF81;
+$color-primary-dark: #1a1a1d;
+$color-secondary-dark: #4e4e50;
+$color-primary-bright: #ffca28;
+$color-secondary-bright: #f7ef81;
 
 $app-section-height: 500px;
 $app-section-margin-top: 50px;
@@ -32,9 +32,8 @@ $para_default_size: 1.2rem;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'PT Sans', 'Roboto', sans-serif;
+  font-family: "PT Sans", "Roboto", sans-serif;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -42,13 +41,52 @@ html {
   -ms-overflow-x: hidden;
 
   body {
-    // @todo: Remove comment. background-color: $color-black;
+    // @todo: Remove comment.
+    background-color: $color-black;
     max-width: 100%;
 
+    @media (max-width: 540px) {
+      .block-side-by-side {
+        display: block !important;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 90%;
+      }
+      .main-info-section img.img-responsive.img-fluid.img-circle {
+        margin-top: 80px;
+        margin: 0 auto;
+        top: -25rem;
+        z-index: -1;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto;
+        opacity: 0.4;
+      }
+      .row {
+        display: block;
+        text-align: center;
+      }
+
+      .container.main-info-section {
+        padding: 0;
+      }
+
+      .about h1,
+      .skills h1,
+      .work h1,
+      .contact h1 {
+        text-align: center !important;
+        font-size: 8rem;
+      }
+    }
     .container {
       //padding: 0 100px 0 100px;
       padding: 0 100px 100px 100px;
       margin: 0 auto;
+
+      @media (max-width: 540px) {
+        padding: 0 40px 40px 40px;
+      }
 
       header h1,
       header a,
@@ -62,7 +100,7 @@ html {
 
       a {
         text-decoration: none;
-        font-size: .9rem;
+        font-size: 0.9rem;
         text-transform: uppercase;
         position: relative;
         top: 50%;
@@ -74,7 +112,6 @@ html {
         list-style: none;
         margin-left: 30px;
       }
-
     }
 
     [class^="mat-"] {
@@ -84,31 +121,33 @@ html {
         outline: none !important;
       }
     }
-
   }
-
 }
 /**
  * ==============================================================
  * CUSTOM SCROLLBAR
  * ==============================================================
  */
-//::-webkit-scrollbar-track  {
-//  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-//  border-radius: 10px;
-//  //background-color: $color-secondary-bright;
-//  //background-color: $color-primary-dark;
-//}
-//::-webkit-scrollbar  {
-//  width: 12px;
-//  //background-color: $color-primary-dark;
-//}
-//::-webkit-scrollbar-thumb  {
-//  border-radius: 10px;
-//  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-//  //background-color: $color-primary-bright;
-//  background-image: linear-gradient(to bottom, $color-primary-bright, $color-pink-light);
-//}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  //background-color: $color-secondary-bright;
+  //background-color: $color-primary-dark;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  //background-color: $color-primary-dark;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  //background-color: $color-primary-bright;
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary-bright,
+    $color-pink-light
+  );
+}
 /**
  * ==============================================================
  * CUSTOM SELECTION
@@ -122,6 +161,3 @@ html {
   background: $color-secondary-bright;
   color: $color-text-whitish;
 }
-
-
-

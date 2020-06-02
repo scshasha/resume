@@ -4,34 +4,39 @@
     <!--      style="cursor: pointer; padding: 5px 10px; display: inline-block; margin: 10px auto;"-->
     <div
       style="
-      cursor: pointer;
-      padding: 15px 10px 10px 10px;
-      display: inline-block;
-      width: 16.66%;
-      text-align: center;
-      transition: all 4ms ease-out;
-      font-size: 1.2rem;
-      font-weight: 900;"
+        cursor: pointer;
+        padding: 15px 10px 10px 10px;
+        display: inline-block;
+        width: 16.66%;
+        text-align: center;
+        transition: all 4ms ease-out;
+        font-size: 1.2rem;
+        font-weight: 900;
+      "
       *ngFor="let category of categories; let i = index"
       id="{{ category.split(' ').join('_') | lowercase }}"
       class="cat-item-{{ category.split(' ').join('_') | lowercase }}"
       [ngClass]="i == 0 ? 'is-active' : ''"
       (click)="filterByCategory(i)"
-    >{{ category }}
+    >
+      {{ category }}
     </div>
   </div>
 
-  <div class="project-grid-wrapper" *ngIf="(projects.length > 0) else filterProjectFourOhFour">
+  <div
+    class="project-grid-wrapper"
+    *ngIf="projects.length > 0; else filterProjectFourOhFour"
+  >
     <div
-      class="project-item-{{ project.name.split(' ').join('_')|lowercase }}"
-      *ngFor="let project of projects;let id = index"
+      class="project-item-{{ project.name.split(' ').join('_') | lowercase }}"
+      *ngFor="let project of projects; let id = index"
     >
-      <a [href]="project.appUrl" target="_blank">
+      <a target="_blank">
         <img
           [src]="project.imgPath"
-          [alt]="project.name.split(' ').join('_')|lowercase"
+          [alt]="project.name.split(' ').join('_') | lowercase"
           class="img-responsive"
-        >
+        />
         <!--        <span>{{ project.name }}</span>-->
       </a>
     </div>
@@ -42,8 +47,16 @@
       <div class="col-md-12">
         <p
           class="w-75 text-center"
-          style="font-size: 1.4rem; padding: 50px 30px; color: #EAEAEA; margin: 100px auto 0px auto;"
-        >Whoops, it seems I have no content for this category, yet! Have a look at other categories?</p>
+          style="
+            font-size: 1.4rem;
+            padding: 50px 30px;
+            color: #eaeaea;
+            margin: 100px auto 0px auto;
+          "
+        >
+          Whoops, it seems I have no content for this category, yet! Have a look
+          at other categories?
+        </p>
       </div>
     </div>
   </ng-template>

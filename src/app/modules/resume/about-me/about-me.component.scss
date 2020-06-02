@@ -1,15 +1,22 @@
-@import '../../../../styles';
+@import "../../../../styles";
 
 .about {
   max-height: 650px; /** $app-section-height; */
   position: relative;
 
+  @media (max-width: 540px) {
+    margin-bottom: 80px;
+  }
+
   h1 {
     font-size: 10rem;
     z-index: 0;
-    opacity: .1;
+    opacity: 0.1;
     color: $color-black-light;
     font-weight: 900;
+    @media (max-width: 540px) {
+      text-align: center;
+    }
   }
 
   .about-info {
@@ -24,10 +31,19 @@
     transform: translateX(-50%);
     z-index: 1;
     margin-top: 20px;
-
+    @media (max-width: 540px) {
+      max-width: 100%;
+      padding: 60px 20px;
+      top: -12rem;
+      text-align: center;
+    }
     p {
       font-size: $para_default_size;
       color: $color-text-whitish;
+
+      @media (max-width: 540px) {
+        text-align: center;
+      }
 
       a {
         text-decoration: underline;
@@ -49,5 +65,13 @@
     left: calc(100% - 100px);
     right: calc(100% - 100px);
     transform: translateX(calc(-100% + 100px));
+
+    @media (max-width: 540px) {
+      top: -500px;
+      left: 0;
+      right: 0;
+      // margin: 0 auto;
+      transform: none;
+    }
   }
 }

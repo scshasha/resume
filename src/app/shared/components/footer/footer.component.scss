@@ -1,11 +1,13 @@
-@import '../../../../styles';
+@import "../../../../styles";
 
 .footer {
   letter-spacing: 3px;
   /** larger space needed before footer items */
   margin-top: 120px;
 
-  a, p, span {
+  a,
+  p,
+  span {
     color: $color-secondary-dark;
   }
   & a {
@@ -13,7 +15,6 @@
   }
 
   & .footer-social-widget {
-
     & a.socials {
       padding: 23px 10px;
       border: 1px solid;
@@ -30,23 +31,28 @@
       transition: all 4ms ease-out;
     }
 
-    .socials-stack-overflow:hover, .socials-stack-overflow:hover .fa-stack-overflow {
-      color: #F48024;
-      border-color: #F48024;
+    .socials-stack-overflow:hover,
+    .socials-stack-overflow:hover .fa-stack-overflow {
+      color: #f48024;
+      border-color: #f48024;
     }
-    & .socials-github:hover, .socials-github:hover .fa-github {
+    & .socials-github:hover,
+    .socials-github:hover .fa-github {
       color: #24292e;
       border-color: #24292e;
     }
-    & .socials-whatsapp:hover, .socials-whatsapp:hover .fa-whatsapp {
+    & .socials-whatsapp:hover,
+    .socials-whatsapp:hover .fa-whatsapp {
       color: #00e676;
       border-color: #00e676;
     }
-    & .socials-linked-in:hover, .socials-linked-in:hover .fa-linkedin-in {
+    & .socials-linked-in:hover,
+    .socials-linked-in:hover .fa-linkedin-in {
       color: #093a73;
       border-color: #093a73;
     }
-    & .socials-download:hover, .socials-download:hover .fa-download {
+    & .socials-download:hover,
+    .socials-download:hover .fa-download {
       color: $color-text-whitish;
       border-color: $color-text-whitish;
     }
@@ -80,23 +86,20 @@
           color: $color-text-whitish;
           fill: $color-text-whitish;
         }
-
       }
     }
   }
 
   & .legal-footer {
-
     & .legal-footer-content {
       padding: 5px 10px 15px;
       text-align: center;
-      width: calc(100% - 390px);;
+      width: calc(100% - 390px);
       margin: 0 auto;
-
+      @media (max-width: 800px) {
+        width: 100%;
+        padding: 0px;
+      }
     }
   }
-
-
 }
-
-
