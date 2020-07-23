@@ -36,8 +36,8 @@ export class ProjectFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.selectedFile);
-    return;
+    // console.log(this.selectedFile);
+    // return;
 
     if (this._project) {
       this.projectService.updateProject(this._project._id, this.projectForm.value).subscribe(

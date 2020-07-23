@@ -8,7 +8,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
-  private projectCount: any = 0; // @todo: Change type to integer...
+  public projectCount: any = 0; // @todo: Change type to integer...
 
   constructor(private projectService: ProjectService, private snackBar: MatSnackBar) { }
 
@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    console.error(this.p);
+    // console.error(this.p);
   }
 
 
