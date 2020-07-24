@@ -13,6 +13,10 @@ export const environment = {
   profile_url_linkedin: 'https://linkedin.com/in/scshasha',
   profile_url_github: 'https://github.com/scshasha',
   profile_url_stackoverflow: 'https://stackoverflow.com/users/6050028/iamsiv',
+  profile_url_facebook: 'https://facebook.com/shasha.christopher',
+  profile_url_gitlab: 'https://gitlab.com/scshasha',
+  profile_url_codepen: '',
+  profile_url_ig: '',
   profile_resume: 'assets/uploads/files/scshasha-gp_compressed.pdf',
 };
 
