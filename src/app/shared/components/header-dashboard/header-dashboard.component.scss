@@ -1,16 +1,20 @@
-mat-toolbar {
-  mat-toolbar-row {
+// @import '../../../../styles';
+
+mat-toolbar, #dashboard-toolbar {
+  background-color: #BF360C;
+  color: #eaeaea;
+
+  & mat-toolbar-row {
     ul {
       margin-bottom: 0;
       li {
         list-style: none;
 
-
-
         .profile-icon {
           text-align: center;
           width: 42px;
           height: 42px;
+          
           & :hover {
           }
           img {
@@ -18,10 +22,20 @@ mat-toolbar {
             height: 100%;
             object-fit: cover;
             border-radius: 50%;
+            transition: all 400ms ease-out;
+            // -webkit-filter: grayscale(1);
+            // filter: grayscale(1);
             & :hover {
-              border: 5px solid #eaeaea;
+              // border: 5px solid #eaeaea;
+              // filter: brightness(1);
             }
           }
+          // img:hover,
+          // img:focus,
+          // img:active,
+          // img:focus-within {
+          //   filter: brightness(1);
+          // }
         }
       }
     }

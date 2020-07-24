@@ -1,6 +1,7 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary"> -->
+  <mat-toolbar id="dashboard-toolbar" class="dashboard-toolbar">
     <mat-toolbar-row>
-        <span>Dashboard</span>
+        <span class="brand">Christopher</span>
         <button mat-icon-button (click)="dashSideNavToggle()">
           <mat-icon>menu</mat-icon>
         </button>
@@ -20,14 +21,14 @@
                 <li>
                     <button mat-button [matMenuTriggerFor]="personMenu">
                       <div class="profile-icon">
-                        <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile-icon">
+                        <img src="/assets/img/profile-icon.jpg" alt="profile-icon">
                       </div>
                     </button>
 
                     <mat-menu #personMenu="matMenu">
                         <mat-nav-list>
                           <div class="profile-card text-center mb-5">
-                            <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="profile-icon">
+                            <img src="/assets/img/profile-icon.jpg" alt="profile-icon">
                             <div class="header">
                               <h4>Sivuyile Christopher Shasha</h4>
                               <h5>shasha.christopher@gmail.com</h5>
