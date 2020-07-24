@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/src/assets/offline
 
 # profiling files
 chrome-profiler-events*.json
