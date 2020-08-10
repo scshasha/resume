@@ -1,0 +1,8 @@
+<h2 mat-dialog-title class="text-warning"><mat-icon class="mr-2">warning</mat-icon><span>Are you sure?</span></h2>
+<mat-dialog-content class="mat-typography">
+  <p>This action cannot be undone, do you wish to continue?</p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="btn-lg btn-outline-danger" mat-button mat-dialog-close="true">Continue</button>
+  <button class="btn-lg btn-outline-light" mat-button (click)="onNoClick()" cdkFocusInitial>Cancel</button>
+</mat-dialog-actions>

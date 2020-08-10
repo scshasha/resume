@@ -1,0 +1,130 @@
+@import '../../../../styles';
+
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg);
+  }
+}
+
+
+
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg);
+  }
+}
+
+
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg);
+  }
+}
+
+
+.fourOHfour {
+  max-height: 260px; /** $app-section-height; */
+  position: relative;
+
+  margin-top: 180px;
+
+  h1 {
+    font-size: 10rem;
+    z-index: 0;
+    opacity: .1;
+    color: $color-black-light;
+    font-weight: 900;
+  }
+
+  h2,h3 {
+    color: $color-secondary-dark;
+  }
+
+  & h2 {
+    font-weight: 700;
+    font-size: 120px;
+    letter-spacing: -7px;
+    margin-bottom: 20px;
+    animation: glitch 1s linear infinite;
+  }
+
+  & h2:before,
+  & h2:after{
+    content: attr(title);
+    position: absolute;
+    left: 0;
+  }
+
+  & h2:before{
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  }
+
+  & h2:after{
+    animation: glitchBotom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  }
+  & h3 {
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+
+  .page-404-info {
+    max-width: 800px;
+    background-color: $color-primary-dark;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, 0.25);
+    padding: 50px;
+    position: relative;
+    top: -70px;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin-top: 20px;
+    letter-spacing: 3px;
+
+    p {
+      font-size: $para_default_size;
+      color: $color-text-whitish
+
+
+    }
+
+    a {
+      text-decoration: underline;
+      color: $color-secondary-dark;
+    }
+  }
+
+  img {
+    width: 300px;
+    position: relative;
+    top: -300px;
+    left: calc(100% - 100px);
+    right: calc(100% - 100px);
+    transform: translateX(calc(-100% + 100px));
+  }
+}

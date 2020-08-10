@@ -1,0 +1,60 @@
+@import '../../../../styles';
+
+.work {
+  //height: $app-section-height;
+  //top: 150px;
+  position: relative;
+  h1 {
+    font-size: 10rem;
+    z-index: 0;
+    opacity: .25;
+    font-weight: 900;
+  }
+  .project-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+
+    [class^="cat-item-"]:hover, .is-active {
+      border-bottom: 2px solid $color-pink-light;
+    }
+  }
+
+  .project-grid-wrapper {
+    margin-top: $app-section-margin-top;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    //grid-template-columns: repeat(auto-fit, 350px);
+    grid-gap: 20px;
+
+    div[class^='project-item-'] {
+      overflow: hidden;
+      a {
+        justify-self: center;
+        position: relative;
+        display: inline-block;
+
+        img {
+          //width: 350px;
+          justify-self: center;
+          display: block;
+          object-fit: cover;
+          max-width: 100%;
+          transition: all 400ms ease-out;
+          -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+        }
+
+        img:hover {
+          transform: scale(1.15) !important;
+          filter: brightness(1);
+        }
+
+      }
+    }
+  }
+
+}
+
+

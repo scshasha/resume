@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   version: '1.1',
   base_api: 'http://localhost:8000/api/auth',
+  base_api_url: 'http://localhost:3000/api',
   mail_to: 'shaha.christopher@gmail.com',
   mail_subject: 'Howdy, Chris.',
   google_au: '',
