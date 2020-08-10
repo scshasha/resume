@@ -9,11 +9,11 @@ export class SidebarnavComponent implements OnInit {
   public readonly links = [{
     url: 'projects',
     name: 'Projects',
-    icon: 'list'
+    icon: 'bubble_chart'
   }, {
     url: 'skills',
     name: 'Skills',
-    icon: 'assessment'
+    icon: 'content_paste'
   }];
 
   constructor() { }
