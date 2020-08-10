@@ -19,6 +19,7 @@ import { FourohfourComponent } from './shared/components/fourohfour/fourohfour.c
 import {ResumeModule} from './modules/resume/resume.module';
 import {DefaultModule} from './layouts/default/default.module';
 import {MaterialModule} from './shared/modules/material.module';
+import { SettingsComponent } from './modules/pages/settings/settings.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MaterialModule} from './shared/modules/material.module';
         FooterComponent,
         PolicyComponent,
         FourohfourComponent,
-        ComingsoonComponent
+        ComingsoonComponent,
+        SettingsComponent
     ],
     imports: [
         BrowserModule,

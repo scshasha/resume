@@ -2,9 +2,21 @@
   mat-icon, i.fa {
     vertical-align: middle;
     margin-right: 20px;
+    color: #5f6368;
+    fill: #5f6368;
   }
-}
-
-mat-nav-list {
-
+  mat-nav-list {
+    h2, a span {
+      font-size: .877rem !important;
+      font-weight: 600 !important;
+    }
+    a span {
+      color: #5f6368;
+    }
+    .fa {
+      font-size: 20px;
+      margin-right: 24px;
+      margin-left: 4px;
+    }
+  }
 }

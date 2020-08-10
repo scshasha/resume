@@ -14,12 +14,7 @@
     padding: 1.5em 0;
 
     & .fa {
-      color: inherit;
       display: inline-block;
-      font-size: inherit;
-      height: inherit;
-      position: relative;
-      width: inherit;
     }
 
     & .fa::before, .fa::after {
@@ -51,8 +46,7 @@
       flex-wrap: wrap;
 
       & .copyright {
-        // padding-top: .75em;
-        padding-top: .95em;
+        padding-top: .95em; /*.75em;*/
         font-size: .875em;
         line-height: 1.71429em;
         overflow: hidden;
@@ -79,7 +73,7 @@
           position: relative;
           height: 2.5em;
           width: 2.5em;
-          color: #fff;
+          color: #EAEAEA;
         }
       }
 

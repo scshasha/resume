@@ -11,6 +11,7 @@ import {DefaultComponent} from './layouts/default/default.component';
 import {DashboardComponent} from './modules/dashboard/dashboard.component';
 import {ProjectListComponent} from "./modules/pages/projects/components/project-list/project-list.component";
 import {ProjectFormComponent} from "./modules/pages/projects/components/project-form/project-form.component";
+import { SettingsComponent } from './modules/pages/settings/settings.component';
 
 const routes: Routes = [{
     path: '',
@@ -60,6 +61,9 @@ const routes: Routes = [{
     }, {
       path: 'projects/edit/:id',
       component: ProjectFormComponent
+    }, {
+      path: 'settings',
+      component: SettingsComponent
     }]
   },
 

@@ -1,0 +1,16 @@
+#settings-section {
+    margin: 0 0 0 50px;
+
+    #header {
+        .title {
+            font-size: .8rem;
+            font-weight: 400;
+            letter-spacing: .25px;
+            margin-bottom: 12px;
+            margin-top: var(--cr-section-vertical-margin);
+            outline: none;
+            padding-bottom: 4px;
+            padding-top: 8px;
+        }
+    }
+}

@@ -2,21 +2,25 @@
   <mat-toolbar id="dashboard-toolbar" class="dashboard-toolbar">
     <mat-toolbar-row>
         <span class="brand">Christopher</span>
-        <button mat-icon-button (click)="dashSideNavToggle()">
+        <!-- <button mat-icon-button (click)="dashSideNavToggle()">
           <mat-icon>menu</mat-icon>
-        </button>
+        </button> -->
 
         <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
             <ul fxLayout="row" fxLayoutGap="20px">
                 <li>
-                    <button mat-icon-button>
-                        <mat-icon>settings</mat-icon>
-                    </button>
+                    <a routerLink="settings" class="header-link">
+                      <button mat-icon-button>
+                          <mat-icon>settings</mat-icon>
+                      </button>
+                    </a>
                 </li>
                 <li>
-                    <button mat-icon-button>
+                    <a routerLink="settings/help" class="header-link">
+                      <button mat-icon-button>
                         <mat-icon>help_outline</mat-icon>
-                    </button>
+                      </button>
+                    </a>
                 </li>
                 <li>
                     <button mat-button [matMenuTriggerFor]="personMenu">

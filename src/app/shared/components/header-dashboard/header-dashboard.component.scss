@@ -2,13 +2,17 @@
 
 mat-toolbar, #dashboard-toolbar {
   background-color: #BF360C;
-  color: #eaeaea;
+  color: #EAEAEA;
 
   & mat-toolbar-row {
     ul {
       margin-bottom: 0;
       li {
         list-style: none;
+
+        a {
+          color: #EAEAEA;
+        }
 
         .profile-icon {
           text-align: center;
