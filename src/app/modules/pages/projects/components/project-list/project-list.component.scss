@@ -7,3 +7,13 @@ table {
 	right: 5%;
     position: absolute;
 }
+
+button.mat-button-base, 
+button.mat-primary, 
+button.mat-stroked-button.mat-primary {
+  color: #BF360C;
+}
+
+button.mat-primary:hover {
+  background-color: rgba(191,54,12,.05);
+}

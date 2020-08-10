@@ -1,9 +1,9 @@
 <mat-nav-list>
-  <h2 mat-subheader>Pages</h2>
+  <h2 mat-subheader class="muted mute">Pages</h2>
 
   <a mat-list-item routerLink="/manage" routerLinkActive="list-item-active">
     <mat-icon class="mat-18">av_timer</mat-icon>
-    <span>Dashboard</span>
+    <span>Overview</span>
   </a>
   <a *ngFor="let link of links"
     mat-list-item routerLink="{{link.url}}" routerLinkActive="list-item-active">
@@ -11,12 +11,53 @@
     <span>{{ link.name }}</span>
   </a>
 
+  <mat-divider></mat-divider>
 
-  <h2 mat-subheader>Tools</h2>
-  <a mat-list-item routerLink="repositories" routerLinkActive="list-item-active">
-    <mat-icon>code</mat-icon>
-    <span>Repo</span>
+  <h2 mat-subheader class="muted mute">Other</h2>
+
+  <a mat-list-item href="" routerLinkActive="list-item-active">
+    <i class="fa fa-github"></i>
+    <span>GitHub</span>
   </a>
 
+  <a mat-list-item href="" routerLinkActive="list-item-active">
+    <i class="fa fa-stack-overflow"></i>
+    <span>Stack Overflow</span>
+  </a>
 
+  <a mat-list-item href="" routerLinkActive="list-item-active">
+    <i class="fa fa-codepen"></i>
+    <span>CodePen</span>
+  </a>
+
+  <a mat-list-item href="" routerLinkActive="list-item-active">
+    <i class="fa fa-linkedin"></i>
+    <span>LinkedIn</span>
+  </a>
+  <!-- <a mat-list-item routerLink="repositories" routerLinkActive="list-item-active">
+    <mat-icon>code</mat-icon>
+    <span>Repo</span>
+  </a> -->
+  <!-- <a mat-list-item href="">
+    <i class="fa fa-gitlab"></i>  
+    <span>GitLab</span>
+  </a> -->
+
+  <!-- <a mat-list-item href="">
+    <i class="fa fa-dribbble"></i>
+    <span>Dribbble</span>
+  </a> -->
+
+  <!-- <a mat-list-item href="">
+    <i class="fa fa-facebook"></i>
+    <span>Facebook</span>
+  </a> -->
+  <!-- <a mat-list-item href="">
+    <i class="fa fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a> -->
+  <!-- <a mat-list-item href="">
+    <i class="fa fa-envelope"></i>
+    <span>E-Mail</span>
+  </a> -->  
 </mat-nav-list>
