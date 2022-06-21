@@ -1,6 +1,6 @@
 import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import {UntypedFormGroup, UntypedFormBuilder, Validators, UntypedFormControl} from '@angular/forms';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ProjectService } from '../../services/project.service';
@@ -16,14 +16,14 @@ export class ProjectFormComponent implements OnInit {
 
   // tslint:disable-next-line:variable-name
   private _project: Project;
-  projectForm: FormGroup;
+  projectForm: UntypedFormGroup;
   progress = 0;
   selectedFile = null;
   screenshotPreview = null;
   formStepper = 1;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private projectService: ProjectService,
     private snackBar: MatSnackBar,
     private router: Router,
@@ -125,7 +125,7 @@ export class ProjectFormComponent implements OnInit {
 }
 
 export function requiredFileType( type: string ) {
-  return (control: FormControl) => {
+  return (control: UntypedFormControl) => {
     const file = control.value;
     if ( file ) {
       const extension = file.name.split('.')[1].toLowerCase();
